@@ -22,55 +22,55 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Button1 = New Button()
+        bttn_appetizers = New Button()
         Panel1 = New Panel()
+        bttn_mainCourse = New Button()
         Label1 = New Label()
-        Button2 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Button1
+        ' bttn_appetizers
         ' 
-        Button1.Location = New Point(75, 7)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(112, 29)
-        Button1.TabIndex = 0
-        Button1.Text = "Appetizers"
-        Button1.UseVisualStyleBackColor = True
+        bttn_appetizers.Location = New Point(75, 19)
+        bttn_appetizers.Name = "bttn_appetizers"
+        bttn_appetizers.Size = New Size(112, 29)
+        bttn_appetizers.TabIndex = 0
+        bttn_appetizers.Text = "Appetizers"
+        bttn_appetizers.UseVisualStyleBackColor = True
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.AntiqueWhite
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(bttn_mainCourse)
+        Panel1.Controls.Add(bttn_appetizers)
         Panel1.Dock = DockStyle.Bottom
-        Panel1.Location = New Point(0, 491)
+        Panel1.Location = New Point(0, 463)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1027, 48)
+        Panel1.Size = New Size(1027, 76)
         Panel1.TabIndex = 1
+        ' 
+        ' bttn_mainCourse
+        ' 
+        bttn_mainCourse.Location = New Point(193, 19)
+        bttn_mainCourse.Name = "bttn_mainCourse"
+        bttn_mainCourse.Size = New Size(112, 29)
+        bttn_mainCourse.TabIndex = 1
+        bttn_mainCourse.Text = "Main Course"
+        bttn_mainCourse.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Stardew Valley Stonks", 24.0F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(337, 25)
+        Label1.Font = New Font("Stardew Valley Stonks", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Location = New Point(330, 30)
         Label1.Name = "Label1"
         Label1.Size = New Size(339, 43)
         Label1.TabIndex = 2
         Label1.Text = "Ordering System"
         ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(193, 7)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(112, 29)
-        Button2.TabIndex = 1
-        Button2.Text = "Button2"
-        Button2.UseVisualStyleBackColor = True
-        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Cornsilk
         ClientSize = New Size(1027, 539)
@@ -84,8 +84,8 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents bttn_appetizers As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button2 As Button
+    Friend WithEvents bttn_mainCourse As Button
     Friend WithEvents Label1 As Label
 End Class
