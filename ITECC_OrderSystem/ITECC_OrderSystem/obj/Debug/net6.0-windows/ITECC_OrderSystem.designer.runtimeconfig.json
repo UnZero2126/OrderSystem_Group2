@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Jann Railey\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Jann Railey\\.nuget\\packages"
+      "C:\\Users\\reano\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\reano\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
