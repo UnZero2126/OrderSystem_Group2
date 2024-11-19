@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Railey brrt brrtt\\Codes\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
+      "projectUniqueName": "C:\\Users\\Jann Railey\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
       "projectName": "ITECC_OrderSystem",
-      "projectPath": "C:\\Railey brrt brrtt\\Codes\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
+      "projectPath": "C:\\Users\\Jann Railey\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
       "packagesPath": "C:\\Users\\Jann Railey\\.nuget\\packages\\",
-      "outputPath": "C:\\Railey brrt brrtt\\Codes\\ITECC_OrderSystem\\ITECC_OrderSystem\\obj\\",
+      "outputPath": "C:\\Users\\Jann Railey\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jann Railey\\AppData\\Roaming\\NuGet\\NuGet.Config",
