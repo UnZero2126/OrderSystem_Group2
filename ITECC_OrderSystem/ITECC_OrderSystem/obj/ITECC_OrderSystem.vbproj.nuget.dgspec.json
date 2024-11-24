@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\reano\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj": {}
+    "C:\\Users\\Jann Railey\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\reano\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj": {
+    "C:\\Users\\Jann Railey\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\reano\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
+        "projectUniqueName": "C:\\Users\\Jann Railey\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
         "projectName": "ITECC_OrderSystem",
-        "projectPath": "C:\\Users\\reano\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
-        "packagesPath": "C:\\Users\\reano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\reano\\Source\\Repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\obj\\",
+        "projectPath": "C:\\Users\\Jann Railey\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\ITECC_OrderSystem.vbproj",
+        "packagesPath": "C:\\Users\\Jann Railey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jann Railey\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\reano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jann Railey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
