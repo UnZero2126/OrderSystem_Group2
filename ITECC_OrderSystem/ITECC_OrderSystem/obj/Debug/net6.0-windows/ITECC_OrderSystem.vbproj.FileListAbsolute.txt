@@ -58,3 +58,27 @@ C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\ob
 C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form5.resources
 C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form6.resources
 C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form7.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\ITECC_OrderSystem.exe
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\ITECC_OrderSystem.deps.json
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\ITECC_OrderSystem.runtimeconfig.json
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\ITECC_OrderSystem.dll
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\ITECC_OrderSystem.pdb
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.vbproj.AssemblyReference.cache
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form1.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form2.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form3.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form4.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form5.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form6.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form7.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Resources.resources
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.vbproj.GenerateResource.cache
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.AssemblyInfoInputs.cache
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.AssemblyInfo.vb
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.dll
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\refint\ITECC_OrderSystem.dll
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.pdb
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.genruntimeconfig.cache
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ref\ITECC_OrderSystem.dll
