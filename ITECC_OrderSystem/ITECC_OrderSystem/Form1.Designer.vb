@@ -169,6 +169,7 @@ Partial Class Form1
         Label_AOsoftBoiledegg = New Label()
         bttn_AOsoftBoiledegg = New Button()
         Label9 = New Label()
+        Button2 = New Button()
         AboutInfo.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -1569,6 +1570,7 @@ Partial Class Form1
         ' 
         ' Panel_AO
         ' 
+        Panel_AO.Controls.Add(Button2)
         Panel_AO.Controls.Add(Panel_AOtofu)
         Panel_AO.Controls.Add(Panel_AOkimchi)
         Panel_AO.Controls.Add(Panel_AOnori)
@@ -1743,6 +1745,15 @@ Partial Class Form1
         Label9.Size = New Size(333, 46)
         Label9.TabIndex = 2
         Label9.Text = "Ordering System"
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(675, 318)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(94, 29)
+        Button2.TabIndex = 10
+        Button2.Text = "Button2"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -1998,4 +2009,5 @@ Partial Class Form1
     Friend WithEvents Label_AOsoftBoiledegg As Label
     Friend WithEvents bttn_AOsoftBoiledegg As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents Button2 As Button
 End Class

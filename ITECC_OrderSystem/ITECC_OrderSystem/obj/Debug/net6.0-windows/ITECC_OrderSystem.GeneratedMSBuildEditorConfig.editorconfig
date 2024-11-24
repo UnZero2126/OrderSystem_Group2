@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ITECC_OrderSystem
-build_property.ProjectDir = C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\
