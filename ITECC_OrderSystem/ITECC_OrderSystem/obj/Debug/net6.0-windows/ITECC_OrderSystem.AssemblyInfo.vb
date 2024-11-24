@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("ITECC_OrderSystem"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed06347c528c7965dd7f12e9e9ad51b8e271e47b"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("ITECC_OrderSystem"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("ITECC_OrderSystem"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

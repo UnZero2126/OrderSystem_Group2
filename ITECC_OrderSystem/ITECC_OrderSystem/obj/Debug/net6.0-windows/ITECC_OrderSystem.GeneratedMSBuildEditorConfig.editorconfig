@@ -1,6 +1,6 @@
 is_global = true
 build_property.ApplicationManifest = 
-build_property.StartupObject = Sub Main
+build_property.StartupObject = ITECC_OrderSystem.My.MyApplication
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 
 build_property.ApplicationUseCompatibleTextRendering = 
@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ITECC_OrderSystem
-build_property.ProjectDir = C:\Users\Jann Railey\source\repos\OrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\
+build_property.ProjectDir = C:\Users\reano\source\repos\Finals_Group2\ITECC_OrderSystem\ITECC_OrderSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
