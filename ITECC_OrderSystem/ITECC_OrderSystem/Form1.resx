@@ -123,4 +123,16 @@
   <metadata name="TimerPanel_Extend.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAARBJREFUOE+11D9LQlEYx/FLcwVFQy4FBZq1CK619RYaGhwaHI1GCbIo2gpHCyKb
+        aukNhPgOXKIaQnTolfT99Rhy/+nxWF/44ONBDvdc7jX4r7axi4Wfb1M2gyY+cKiFv+oMn2h5aCB2Om14
+        haKHa1wilDY8snHiaji2cdg0G74jb+Mw3w1zeLMxnO+Gp9CRY/luqONu2hjuBBUbnduANkxsEfM2OneB
+        xOP+VsCeI92iHpaQmN7lPm4d6blbRmq6f49Yx1qKFejdd2oOd+iM8Dr41G+d0tVt2ZjaDUo2jm4HX+hi
+        XwuRytBzuoqMFsalH9/jHHUtRNLtqOIBB1oYl/7PnvECXUW0LNp4wqwW4gXBN2YxQfi0gZL2AAAAAElF
+        TkSuQmCC
+</value>
+  </data>
 </root>

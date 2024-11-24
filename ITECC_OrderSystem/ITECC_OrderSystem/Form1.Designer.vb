@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Label1 = New Label()
         AboutInfo = New Panel()
         Panel3 = New Panel()
@@ -48,11 +49,16 @@ Partial Class Form1
         CollapseAILogo = New PictureBox()
         TimerPanel_Collapse = New Timer(components)
         TimerPanel_Extend = New Timer(components)
-        Panel2 = New Panel()
+        Panel_menu = New Panel()
+        bttn_MakeRamen = New Button()
+        bttn_promos = New Button()
+        bttn_addons = New Button()
+        bttn_drinks = New Button()
         bttn_dessert = New Button()
         Button1 = New Button()
         bttn_appetizer = New Button()
-        bttn_drinks = New Button()
+        Panel_top = New Panel()
+        Button2 = New Button()
         AboutInfo.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -62,14 +68,15 @@ Partial Class Form1
         CType(Brojan, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(CollapseAILogo, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
+        Panel_menu.SuspendLayout()
+        Panel_top.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Stardew Valley Stonks", 24.0F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(330, 30)
+        Label1.Location = New Point(445, 47)
         Label1.Name = "Label1"
         Label1.Size = New Size(339, 43)
         Label1.TabIndex = 2
@@ -312,27 +319,82 @@ Partial Class Form1
         CollapseAILogo.TabIndex = 0
         CollapseAILogo.TabStop = False
         ' 
-        ' Panel2
+        ' Panel_menu
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(203), CByte(226), CByte(181))
-        Panel2.Controls.Add(bttn_drinks)
-        Panel2.Controls.Add(bttn_dessert)
-        Panel2.Controls.Add(Button1)
-        Panel2.Controls.Add(bttn_appetizer)
-        Panel2.Dock = DockStyle.Bottom
-        Panel2.Location = New Point(203, 481)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(824, 58)
-        Panel2.TabIndex = 4
+        Panel_menu.BackColor = Color.FromArgb(CByte(203), CByte(226), CByte(181))
+        Panel_menu.Controls.Add(bttn_MakeRamen)
+        Panel_menu.Controls.Add(bttn_promos)
+        Panel_menu.Controls.Add(bttn_addons)
+        Panel_menu.Controls.Add(bttn_drinks)
+        Panel_menu.Controls.Add(bttn_dessert)
+        Panel_menu.Controls.Add(Button1)
+        Panel_menu.Controls.Add(bttn_appetizer)
+        Panel_menu.Dock = DockStyle.Bottom
+        Panel_menu.Location = New Point(203, 481)
+        Panel_menu.Name = "Panel_menu"
+        Panel_menu.Size = New Size(824, 58)
+        Panel_menu.TabIndex = 4
+        ' 
+        ' bttn_MakeRamen
+        ' 
+        bttn_MakeRamen.FlatAppearance.BorderSize = 0
+        bttn_MakeRamen.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
+        bttn_MakeRamen.FlatStyle = FlatStyle.Flat
+        bttn_MakeRamen.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_MakeRamen.Location = New Point(604, 12)
+        bttn_MakeRamen.Name = "bttn_MakeRamen"
+        bttn_MakeRamen.Size = New Size(208, 35)
+        bttn_MakeRamen.TabIndex = 6
+        bttn_MakeRamen.Text = "Make Your Own Ramen"
+        bttn_MakeRamen.UseVisualStyleBackColor = True
+        ' 
+        ' bttn_promos
+        ' 
+        bttn_promos.FlatAppearance.BorderSize = 0
+        bttn_promos.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
+        bttn_promos.FlatStyle = FlatStyle.Flat
+        bttn_promos.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_promos.Location = New Point(516, 12)
+        bttn_promos.Name = "bttn_promos"
+        bttn_promos.Size = New Size(82, 35)
+        bttn_promos.TabIndex = 5
+        bttn_promos.Text = "Promos"
+        bttn_promos.UseVisualStyleBackColor = True
+        ' 
+        ' bttn_addons
+        ' 
+        bttn_addons.FlatAppearance.BorderSize = 0
+        bttn_addons.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
+        bttn_addons.FlatStyle = FlatStyle.Flat
+        bttn_addons.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_addons.Location = New Point(416, 12)
+        bttn_addons.Name = "bttn_addons"
+        bttn_addons.Size = New Size(82, 34)
+        bttn_addons.TabIndex = 4
+        bttn_addons.Text = "Add ons"
+        bttn_addons.UseVisualStyleBackColor = True
+        ' 
+        ' bttn_drinks
+        ' 
+        bttn_drinks.FlatAppearance.BorderSize = 0
+        bttn_drinks.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
+        bttn_drinks.FlatStyle = FlatStyle.Flat
+        bttn_drinks.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_drinks.Location = New Point(318, 11)
+        bttn_drinks.Name = "bttn_drinks"
+        bttn_drinks.Size = New Size(80, 35)
+        bttn_drinks.TabIndex = 3
+        bttn_drinks.Text = "Drinks"
+        bttn_drinks.UseVisualStyleBackColor = True
         ' 
         ' bttn_dessert
         ' 
         bttn_dessert.FlatAppearance.BorderSize = 0
         bttn_dessert.FlatStyle = FlatStyle.Flat
         bttn_dessert.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
-        bttn_dessert.Location = New Point(229, 11)
+        bttn_dessert.Location = New Point(229, 12)
         bttn_dessert.Name = "bttn_dessert"
-        bttn_dessert.Size = New Size(94, 35)
+        bttn_dessert.Size = New Size(83, 35)
         bttn_dessert.TabIndex = 2
         bttn_dessert.Text = "Dessert"
         bttn_dessert.UseVisualStyleBackColor = True
@@ -342,7 +404,7 @@ Partial Class Form1
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(106, 11)
+        Button1.Location = New Point(101, 11)
         Button1.Name = "Button1"
         Button1.Size = New Size(128, 35)
         Button1.TabIndex = 1
@@ -355,21 +417,36 @@ Partial Class Form1
         bttn_appetizer.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
         bttn_appetizer.FlatStyle = FlatStyle.Flat
         bttn_appetizer.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
-        bttn_appetizer.Location = New Point(6, 11)
+        bttn_appetizer.Location = New Point(3, 11)
         bttn_appetizer.Name = "bttn_appetizer"
         bttn_appetizer.Size = New Size(107, 35)
         bttn_appetizer.TabIndex = 0
         bttn_appetizer.Text = "Appetizer"
         bttn_appetizer.UseVisualStyleBackColor = True
         ' 
-        ' bttn_drinks
+        ' Panel_top
         ' 
-        bttn_drinks.Location = New Point(329, 17)
-        bttn_drinks.Name = "bttn_drinks"
-        bttn_drinks.Size = New Size(94, 29)
-        bttn_drinks.TabIndex = 3
-        bttn_drinks.Text = "Drinks"
-        bttn_drinks.UseVisualStyleBackColor = True
+        Panel_top.Controls.Add(Button2)
+        Panel_top.Dock = DockStyle.Top
+        Panel_top.Location = New Point(203, 0)
+        Panel_top.Name = "Panel_top"
+        Panel_top.Size = New Size(824, 37)
+        Panel_top.TabIndex = 5
+        ' 
+        ' Button2
+        ' 
+        Button2.BackgroundImageLayout = ImageLayout.Zoom
+        Button2.Dock = DockStyle.Right
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = Color.Cornsilk
+        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
+        Button2.Location = New Point(781, 0)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(43, 37)
+        Button2.TabIndex = 0
+        Button2.TextAlign = ContentAlignment.MiddleRight
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -377,7 +454,8 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Cornsilk
         ClientSize = New Size(1027, 539)
-        Controls.Add(Panel2)
+        Controls.Add(Panel_top)
+        Controls.Add(Panel_menu)
         Controls.Add(AboutInfo)
         Controls.Add(Label1)
         MaximizeBox = False
@@ -394,7 +472,8 @@ Partial Class Form1
         CType(Brojan, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(CollapseAILogo, ComponentModel.ISupportInitialize).EndInit()
-        Panel2.ResumeLayout(False)
+        Panel_menu.ResumeLayout(False)
+        Panel_top.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
 
@@ -424,9 +503,14 @@ Partial Class Form1
     Friend WithEvents Label_AboutInfo As Label
     Friend WithEvents TimerPanel_Collapse As Timer
     Friend WithEvents TimerPanel_Extend As Timer
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel_menu As Panel
     Friend WithEvents bttn_appetizer As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents bttn_dessert As Button
     Friend WithEvents bttn_drinks As Button
+    Friend WithEvents bttn_addons As Button
+    Friend WithEvents bttn_MakeRamen As Button
+    Friend WithEvents bttn_promos As Button
+    Friend WithEvents Panel_top As Panel
+    Friend WithEvents Button2 As Button
 End Class
