@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ITECC_OrderSystem/1.0.0": {
+        "runtime": {
+          "ITECC_OrderSystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ITECC_OrderSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
