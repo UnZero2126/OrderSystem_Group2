@@ -26,6 +26,7 @@ Partial Class Form1
         Label1 = New Label()
         AboutInfo = New Panel()
         Panel3 = New Panel()
+        Label_AboutInfo = New Label()
         Label_brojan3 = New Label()
         Label_reano2 = New Label()
         Label_tauries3 = New Label()
@@ -45,9 +46,9 @@ Partial Class Form1
         Brojan = New PictureBox()
         Panel1 = New Panel()
         CollapseAILogo = New PictureBox()
-        Label_AboutInfo = New Label()
         TimerPanel_Collapse = New Timer(components)
         TimerPanel_Extend = New Timer(components)
+        Panel2 = New Panel()
         AboutInfo.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +63,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Stardew Valley Stonks", 24.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Stardew Valley Stonks", 24F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(330, 30)
         Label1.Name = "Label1"
         Label1.Size = New Size(339, 43)
@@ -107,10 +108,20 @@ Partial Class Form1
         Panel3.Size = New Size(203, 502)
         Panel3.TabIndex = 7
         ' 
+        ' Label_AboutInfo
+        ' 
+        Label_AboutInfo.AutoSize = True
+        Label_AboutInfo.Font = New Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_AboutInfo.Location = New Point(18, 28)
+        Label_AboutInfo.Name = "Label_AboutInfo"
+        Label_AboutInfo.Size = New Size(171, 25)
+        Label_AboutInfo.TabIndex = 17
+        Label_AboutInfo.Text = "Meet the Team!"
+        ' 
         ' Label_brojan3
         ' 
         Label_brojan3.AutoSize = True
-        Label_brojan3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_brojan3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_brojan3.Location = New Point(99, 137)
         Label_brojan3.Name = "Label_brojan3"
         Label_brojan3.Size = New Size(67, 18)
@@ -120,7 +131,7 @@ Partial Class Form1
         ' Label_reano2
         ' 
         Label_reano2.AutoSize = True
-        Label_reano2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_reano2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_reano2.Location = New Point(108, 444)
         Label_reano2.Name = "Label_reano2"
         Label_reano2.Size = New Size(50, 17)
@@ -130,7 +141,7 @@ Partial Class Form1
         ' Label_tauries3
         ' 
         Label_tauries3.AutoSize = True
-        Label_tauries3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_tauries3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_tauries3.Location = New Point(121, 362)
         Label_tauries3.Name = "Label_tauries3"
         Label_tauries3.Size = New Size(47, 18)
@@ -150,7 +161,7 @@ Partial Class Form1
         ' Label_brojan2
         ' 
         Label_brojan2.AutoSize = True
-        Label_brojan2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_brojan2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_brojan2.Location = New Point(107, 120)
         Label_brojan2.Name = "Label_brojan2"
         Label_brojan2.Size = New Size(52, 17)
@@ -160,7 +171,7 @@ Partial Class Form1
         ' Label_reano3
         ' 
         Label_reano3.AutoSize = True
-        Label_reano3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_reano3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_reano3.Location = New Point(103, 461)
         Label_reano3.Name = "Label_reano3"
         Label_reano3.Size = New Size(65, 18)
@@ -170,7 +181,7 @@ Partial Class Form1
         ' Label_tauries2
         ' 
         Label_tauries2.AutoSize = True
-        Label_tauries2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_tauries2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_tauries2.Location = New Point(114, 348)
         Label_tauries2.Name = "Label_tauries2"
         Label_tauries2.Size = New Size(64, 17)
@@ -180,7 +191,7 @@ Partial Class Form1
         ' Label_dc2
         ' 
         Label_dc2.AutoSize = True
-        Label_dc2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_dc2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_dc2.Location = New Point(99, 228)
         Label_dc2.Name = "Label_dc2"
         Label_dc2.Size = New Size(79, 17)
@@ -190,7 +201,7 @@ Partial Class Form1
         ' Label_reano1
         ' 
         Label_reano1.AutoSize = True
-        Label_reano1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_reano1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_reano1.Location = New Point(89, 427)
         Label_reano1.Name = "Label_reano1"
         Label_reano1.Size = New Size(108, 17)
@@ -200,7 +211,7 @@ Partial Class Form1
         ' Label_tauries1
         ' 
         Label_tauries1.AutoSize = True
-        Label_tauries1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_tauries1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_tauries1.Location = New Point(77, 321)
         Label_tauries1.Name = "Label_tauries1"
         Label_tauries1.Size = New Size(126, 17)
@@ -238,7 +249,7 @@ Partial Class Form1
         ' Label_dc1
         ' 
         Label_dc1.AutoSize = True
-        Label_dc1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_dc1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_dc1.Location = New Point(99, 211)
         Label_dc1.Name = "Label_dc1"
         Label_dc1.Size = New Size(84, 17)
@@ -258,7 +269,7 @@ Partial Class Form1
         ' Label_brojan1
         ' 
         Label_brojan1.AutoSize = True
-        Label_brojan1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_brojan1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Label_brojan1.Location = New Point(103, 103)
         Label_brojan1.Name = "Label_brojan1"
         Label_brojan1.Size = New Size(60, 17)
@@ -296,22 +307,21 @@ Partial Class Form1
         CollapseAILogo.TabIndex = 0
         CollapseAILogo.TabStop = False
         ' 
-        ' Label_AboutInfo
+        ' Panel2
         ' 
-        Label_AboutInfo.AutoSize = True
-        Label_AboutInfo.Font = New Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_AboutInfo.Location = New Point(18, 28)
-        Label_AboutInfo.Name = "Label_AboutInfo"
-        Label_AboutInfo.Size = New Size(171, 25)
-        Label_AboutInfo.TabIndex = 17
-        Label_AboutInfo.Text = "Meet the Team!"
+        Panel2.Dock = DockStyle.Bottom
+        Panel2.Location = New Point(203, 481)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(824, 58)
+        Panel2.TabIndex = 4
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Cornsilk
         ClientSize = New Size(1027, 539)
+        Controls.Add(Panel2)
         Controls.Add(AboutInfo)
         Controls.Add(Label1)
         MaximizeBox = False
@@ -357,4 +367,5 @@ Partial Class Form1
     Friend WithEvents Label_AboutInfo As Label
     Friend WithEvents TimerPanel_Collapse As Timer
     Friend WithEvents TimerPanel_Extend As Timer
+    Friend WithEvents Panel2 As Panel
 End Class
