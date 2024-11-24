@@ -49,6 +49,10 @@ Partial Class Form1
         TimerPanel_Collapse = New Timer(components)
         TimerPanel_Extend = New Timer(components)
         Panel2 = New Panel()
+        bttn_dessert = New Button()
+        Button1 = New Button()
+        bttn_appetizer = New Button()
+        bttn_drinks = New Button()
         AboutInfo.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -58,12 +62,13 @@ Partial Class Form1
         CType(Brojan, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(CollapseAILogo, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Stardew Valley Stonks", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Stardew Valley Stonks", 24.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(330, 30)
         Label1.Name = "Label1"
         Label1.Size = New Size(339, 43)
@@ -121,8 +126,8 @@ Partial Class Form1
         ' Label_brojan3
         ' 
         Label_brojan3.AutoSize = True
-        Label_brojan3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label_brojan3.Location = New Point(99, 137)
+        Label_brojan3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_brojan3.Location = New Point(107, 137)
         Label_brojan3.Name = "Label_brojan3"
         Label_brojan3.Size = New Size(67, 18)
         Label_brojan3.TabIndex = 16
@@ -131,8 +136,8 @@ Partial Class Form1
         ' Label_reano2
         ' 
         Label_reano2.AutoSize = True
-        Label_reano2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_reano2.Location = New Point(108, 444)
+        Label_reano2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_reano2.Location = New Point(113, 444)
         Label_reano2.Name = "Label_reano2"
         Label_reano2.Size = New Size(50, 17)
         Label_reano2.TabIndex = 15
@@ -141,7 +146,7 @@ Partial Class Form1
         ' Label_tauries3
         ' 
         Label_tauries3.AutoSize = True
-        Label_tauries3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_tauries3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_tauries3.Location = New Point(121, 362)
         Label_tauries3.Name = "Label_tauries3"
         Label_tauries3.Size = New Size(47, 18)
@@ -161,8 +166,8 @@ Partial Class Form1
         ' Label_brojan2
         ' 
         Label_brojan2.AutoSize = True
-        Label_brojan2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_brojan2.Location = New Point(107, 120)
+        Label_brojan2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_brojan2.Location = New Point(114, 120)
         Label_brojan2.Name = "Label_brojan2"
         Label_brojan2.Size = New Size(52, 17)
         Label_brojan2.TabIndex = 12
@@ -171,8 +176,8 @@ Partial Class Form1
         ' Label_reano3
         ' 
         Label_reano3.AutoSize = True
-        Label_reano3.Font = New Font("Times New Roman", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label_reano3.Location = New Point(103, 461)
+        Label_reano3.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_reano3.Location = New Point(107, 461)
         Label_reano3.Name = "Label_reano3"
         Label_reano3.Size = New Size(65, 18)
         Label_reano3.TabIndex = 11
@@ -181,7 +186,7 @@ Partial Class Form1
         ' Label_tauries2
         ' 
         Label_tauries2.AutoSize = True
-        Label_tauries2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_tauries2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label_tauries2.Location = New Point(114, 348)
         Label_tauries2.Name = "Label_tauries2"
         Label_tauries2.Size = New Size(64, 17)
@@ -191,7 +196,7 @@ Partial Class Form1
         ' Label_dc2
         ' 
         Label_dc2.AutoSize = True
-        Label_dc2.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_dc2.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label_dc2.Location = New Point(99, 228)
         Label_dc2.Name = "Label_dc2"
         Label_dc2.Size = New Size(79, 17)
@@ -201,7 +206,7 @@ Partial Class Form1
         ' Label_reano1
         ' 
         Label_reano1.AutoSize = True
-        Label_reano1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_reano1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label_reano1.Location = New Point(89, 427)
         Label_reano1.Name = "Label_reano1"
         Label_reano1.Size = New Size(108, 17)
@@ -211,8 +216,8 @@ Partial Class Form1
         ' Label_tauries1
         ' 
         Label_tauries1.AutoSize = True
-        Label_tauries1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_tauries1.Location = New Point(77, 321)
+        Label_tauries1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_tauries1.Location = New Point(77, 331)
         Label_tauries1.Name = "Label_tauries1"
         Label_tauries1.Size = New Size(126, 17)
         Label_tauries1.TabIndex = 7
@@ -249,7 +254,7 @@ Partial Class Form1
         ' Label_dc1
         ' 
         Label_dc1.AutoSize = True
-        Label_dc1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_dc1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label_dc1.Location = New Point(99, 211)
         Label_dc1.Name = "Label_dc1"
         Label_dc1.Size = New Size(84, 17)
@@ -269,8 +274,8 @@ Partial Class Form1
         ' Label_brojan1
         ' 
         Label_brojan1.AutoSize = True
-        Label_brojan1.Font = New Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_brojan1.Location = New Point(103, 103)
+        Label_brojan1.Font = New Font("Times New Roman", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_brojan1.Location = New Point(113, 103)
         Label_brojan1.Name = "Label_brojan1"
         Label_brojan1.Size = New Size(60, 17)
         Label_brojan1.TabIndex = 1
@@ -309,15 +314,66 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
+        Panel2.BackColor = Color.FromArgb(CByte(203), CByte(226), CByte(181))
+        Panel2.Controls.Add(bttn_drinks)
+        Panel2.Controls.Add(bttn_dessert)
+        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(bttn_appetizer)
         Panel2.Dock = DockStyle.Bottom
         Panel2.Location = New Point(203, 481)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(824, 58)
         Panel2.TabIndex = 4
         ' 
+        ' bttn_dessert
+        ' 
+        bttn_dessert.FlatAppearance.BorderSize = 0
+        bttn_dessert.FlatStyle = FlatStyle.Flat
+        bttn_dessert.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_dessert.Location = New Point(229, 11)
+        bttn_dessert.Name = "bttn_dessert"
+        bttn_dessert.Size = New Size(94, 35)
+        bttn_dessert.TabIndex = 2
+        bttn_dessert.Text = "Dessert"
+        bttn_dessert.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.Location = New Point(106, 11)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(128, 35)
+        Button1.TabIndex = 1
+        Button1.Text = "Main Course"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' bttn_appetizer
+        ' 
+        bttn_appetizer.FlatAppearance.BorderSize = 0
+        bttn_appetizer.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(231), CByte(251), CByte(230))
+        bttn_appetizer.FlatStyle = FlatStyle.Flat
+        bttn_appetizer.Font = New Font("Javanese Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        bttn_appetizer.Location = New Point(6, 11)
+        bttn_appetizer.Name = "bttn_appetizer"
+        bttn_appetizer.Size = New Size(107, 35)
+        bttn_appetizer.TabIndex = 0
+        bttn_appetizer.Text = "Appetizer"
+        bttn_appetizer.UseVisualStyleBackColor = True
+        ' 
+        ' bttn_drinks
+        ' 
+        bttn_drinks.Location = New Point(329, 17)
+        bttn_drinks.Name = "bttn_drinks"
+        bttn_drinks.Size = New Size(94, 29)
+        bttn_drinks.TabIndex = 3
+        bttn_drinks.Text = "Drinks"
+        bttn_drinks.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Cornsilk
         ClientSize = New Size(1027, 539)
@@ -338,6 +394,7 @@ Partial Class Form1
         CType(Brojan, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(CollapseAILogo, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
 
@@ -368,4 +425,8 @@ Partial Class Form1
     Friend WithEvents TimerPanel_Collapse As Timer
     Friend WithEvents TimerPanel_Extend As Timer
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents bttn_appetizer As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents bttn_dessert As Button
+    Friend WithEvents bttn_drinks As Button
 End Class

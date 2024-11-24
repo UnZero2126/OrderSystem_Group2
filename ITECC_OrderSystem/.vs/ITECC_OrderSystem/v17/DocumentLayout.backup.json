@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|solutionrelative:itecc_ordersystem\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|c:\\users\\reano\\source\\repos\\ordersystem_group2\\itecc_ordersystem\\itecc_ordersystem\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|solutionrelative:itecc_ordersystem\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|c:\\users\\reano\\source\\repos\\ordersystem_group2\\itecc_ordersystem\\itecc_ordersystem\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|solutionrelative:itecc_ordersystem\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|c:\\users\\reano\\source\\repos\\ordersystem_group2\\itecc_ordersystem\\itecc_ordersystem\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{520F7960-A2CA-4DB8-BDBD-6B4B04B0BEFB}|ITECC_OrderSystem\\ITECC_OrderSystem.vbproj|solutionrelative:itecc_ordersystem\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,25 +26,25 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb",
               "RelativeDocumentMoniker": "ITECC_OrderSystem\\Form1.vb",
-              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb",
-              "RelativeToolTip": "ITECC_OrderSystem\\Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb*",
+              "RelativeToolTip": "ITECC_OrderSystem\\Form1.vb*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-11-24T06:53:57.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "ITECC_OrderSystem\\Form1.Designer.vb",
-              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.Designer.vb",
-              "RelativeToolTip": "ITECC_OrderSystem\\Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.Designer.vb*",
+              "RelativeToolTip": "ITECC_OrderSystem\\Form1.Designer.vb*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-11-19T06:18:39.027Z",
@@ -56,8 +56,8 @@
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb",
               "RelativeDocumentMoniker": "ITECC_OrderSystem\\Form1.vb",
-              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb [Design]",
-              "RelativeToolTip": "ITECC_OrderSystem\\Form1.vb [Design]",
+              "ToolTip": "C:\\Users\\reano\\source\\repos\\OrderSystem_Group2\\ITECC_OrderSystem\\ITECC_OrderSystem\\Form1.vb [Design]*",
+              "RelativeToolTip": "ITECC_OrderSystem\\Form1.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-11-19T06:02:30.54Z",
               "EditorCaption": " [Design]"
