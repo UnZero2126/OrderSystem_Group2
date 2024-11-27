@@ -22,68 +22,69 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label_TitleVoucher = New Label()
-        TextBox1 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        SuspendLayout()
-        ' 
-        ' Label_TitleVoucher
-        ' 
-        Label_TitleVoucher.AutoSize = True
-        Label_TitleVoucher.Font = New Font("Javanese Text", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_TitleVoucher.ForeColor = Color.FromArgb(CByte(108), CByte(78), CByte(49))
-        Label_TitleVoucher.Location = New Point(97, 38)
-        Label_TitleVoucher.Name = "Label_TitleVoucher"
-        Label_TitleVoucher.Size = New Size(183, 52)
-        Label_TitleVoucher.TabIndex = 0
-        Label_TitleVoucher.Text = "Voucher Code:"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(44, 84)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(287, 27)
-        TextBox1.TabIndex = 1
-        ' 
-        ' Button1
-        ' 
-        Button1.FlatStyle = FlatStyle.Popup
-        Button1.Font = New Font("Javanese Text", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(181, 131)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(150, 36)
-        Button1.TabIndex = 2
-        Button1.Text = "Apply Voucher"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.FlatStyle = FlatStyle.Popup
-        Button2.Font = New Font("Javanese Text", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Button2.Location = New Point(44, 131)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(94, 36)
-        Button2.TabIndex = 3
-        Button2.Text = "Close"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Form4
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Cornsilk
-        ClientSize = New Size(381, 209)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox1)
-        Controls.Add(Label_TitleVoucher)
-        FormBorderStyle = FormBorderStyle.None
-        Name = "Form4"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Form4"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label_TitleVoucher = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'Label_TitleVoucher
+        '
+        Me.Label_TitleVoucher.AutoSize = True
+        Me.Label_TitleVoucher.Font = New System.Drawing.Font("Javanese Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_TitleVoucher.ForeColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label_TitleVoucher.Location = New System.Drawing.Point(97, 38)
+        Me.Label_TitleVoucher.Name = "Label_TitleVoucher"
+        Me.Label_TitleVoucher.Size = New System.Drawing.Size(183, 52)
+        Me.Label_TitleVoucher.TabIndex = 0
+        Me.Label_TitleVoucher.Text = "Voucher Code:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(44, 84)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(287, 27)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Button1
+        '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(181, 131)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 36)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Apply Voucher"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.Location = New System.Drawing.Point(44, 131)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(94, 36)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Close"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Form4
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Cornsilk
+        Me.ClientSize = New System.Drawing.Size(381, 209)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label_TitleVoucher)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Form4"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Form4"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label_TitleVoucher As Label

@@ -66,7 +66,7 @@ Partial Class Form1
         Me.bttn_dessert = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel_maincourse = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.bttn_maincourse = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel_appetizer = New System.Windows.Forms.Panel()
         Me.bttn_appetizer = New System.Windows.Forms.Button()
@@ -153,7 +153,6 @@ Partial Class Form1
         Me.bttn_DRwater = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel_AO = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel_AOtofu = New System.Windows.Forms.Panel()
         Me.Label_AOtofu = New System.Windows.Forms.Label()
         Me.bttn_AOtofu = New System.Windows.Forms.Button()
@@ -664,7 +663,7 @@ Partial Class Form1
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.Panel_maincourse)
-        Me.Panel5.Controls.Add(Me.Button1)
+        Me.Panel5.Controls.Add(Me.bttn_maincourse)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel5.Location = New System.Drawing.Point(114, 0)
         Me.Panel5.Name = "Panel5"
@@ -680,19 +679,19 @@ Partial Class Form1
         Me.Panel_maincourse.Size = New System.Drawing.Size(114, 9)
         Me.Panel_maincourse.TabIndex = 2
         '
-        'Button1
+        'bttn_maincourse
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(0, 9)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 49)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Main Course"
-        Me.Button1.UseCompatibleTextRendering = True
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.bttn_maincourse.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.bttn_maincourse.FlatAppearance.BorderSize = 0
+        Me.bttn_maincourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bttn_maincourse.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.bttn_maincourse.Location = New System.Drawing.Point(0, 9)
+        Me.bttn_maincourse.Name = "bttn_maincourse"
+        Me.bttn_maincourse.Size = New System.Drawing.Size(114, 49)
+        Me.bttn_maincourse.TabIndex = 1
+        Me.bttn_maincourse.Text = "Main Course"
+        Me.bttn_maincourse.UseCompatibleTextRendering = True
+        Me.bttn_maincourse.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -1580,7 +1579,6 @@ Partial Class Form1
         '
         'Panel_AO
         '
-        Me.Panel_AO.Controls.Add(Me.Button2)
         Me.Panel_AO.Controls.Add(Me.Panel_AOtofu)
         Me.Panel_AO.Controls.Add(Me.Panel_AOkimchi)
         Me.Panel_AO.Controls.Add(Me.Panel_AOnori)
@@ -1592,15 +1590,6 @@ Partial Class Form1
         Me.Panel_AO.Name = "Panel_AO"
         Me.Panel_AO.Size = New System.Drawing.Size(849, 444)
         Me.Panel_AO.TabIndex = 12
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(675, 318)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 29)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Panel_AOtofu
         '
@@ -1900,7 +1889,7 @@ Partial Class Form1
     Friend WithEvents TimerPanel_Extend As Timer
     Friend WithEvents Panel_menu As Panel
     Friend WithEvents bttn_appetizer As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents bttn_maincourse As Button
     Friend WithEvents bttn_dessert As Button
     Friend WithEvents bttn_drinks As Button
     Friend WithEvents bttn_addons As Button
@@ -2019,5 +2008,4 @@ Partial Class Form1
     Friend WithEvents Label_AOsoftBoiledegg As Label
     Friend WithEvents bttn_AOsoftBoiledegg As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button2 As Button
 End Class
