@@ -11,6 +11,7 @@ Public Class Form1
     'Database
     Dim conn As MySqlConnection
     Dim cmd As MySqlCommand
+    Dim cmddr As MySqlCommand
     Dim reader As MySqlDataReader
 
     Private Sub CollapseAILogo_Click(sender As Object, e As EventArgs) Handles CollapseAILogo.Click
@@ -52,6 +53,30 @@ Public Class Form1
             bttn_AOnori.Tag = "Nori"
             bttn_AOcorn.Tag = "Corn"
             bttn_AOsoftBoiledegg.Tag = "Soft Boiled Egg"
+            bttn_DRcocaCola.Tag = "Coca Cola"
+            bttn_DRicedTea.Tag = "Iced Tea"
+            bttn_DRmirinda.Tag = "Mirinda"
+            bttn_DRpepsi.Tag = "Pepsi"
+            bttn_DRsake.Tag = "Sake"
+            bttn_DRsprite.Tag = "Sprite"
+            bttn_DRwater.Tag = "Water"
+            bttn_Dbingsu.Tag = "Bingsu"
+            bttn_DiceCream.Tag = "Ice Cream"
+            bttn_Dmochi.Tag = "Mochi"
+            bttn_MCbeefRamen.Tag = "Beef Ramen"
+            bttn_MCchashuRamen.Tag = "Chashu Ramen"
+            bttn_MCcoldRamen.Tag = "Cold Ramen"
+            bttn_MCcurryRamen.Tag = "Curry Ramen"
+            bttn_MCmisoRamen.Tag = "Miso Ramen"
+            bttn_MCshioRamen.Tag = "Shio Ramen"
+            bttn_MCshoyuRamen.Tag = "Shoyu Ramen"
+            bttn_MCtonkotsuRamen.Tag = "Tonkotsu Ramen"
+            bttn_Aedamame.Tag = "Edamame"
+            bttn_Agyoza.Tag = "Gyoza"
+            bttn_Asalad.Tag = "Salad"
+            bttn_Asiomai.Tag = "Siomai"
+            bttn_Atakoyaki.Tag = "Takoyaki"
+            bttn_Atempura.Tag = "Tempura"
 
             LoadMenuItems() ' Load other dynamic addon items
         Catch ex As Exception
@@ -63,34 +88,29 @@ Public Class Form1
 
     Private Sub LoadMenuItems()
         Try
-            cmd = New MySqlCommand("SELECT AOID, Name FROM addons", conn)
+            If conn.State = ConnectionState.Closed Then conn.Open()
+            Dim query As String = "SELECT Name FROM addons WHERE Name NOT IN ('Tofu', 'Kimchi', 'Nori', 'Corn', 'Soft Boiled Egg')
+                               UNION
+                               SELECT Name FROM drinks WHERE Name NOT IN ('Coca Cola', 'Iced Tea', 'Mirinda', 'Pepsi', 'Sake', 'Sprite', 'Water')
+                               UNION
+                               SELECT Name FROM desserts WHERE Name NOT IN ('Bingsu', 'Ice Cream', 'Mochi')
+                               UNION
+                               SELECT Name FROM maincourse WHERE Name NOT IN ('Beef Ramen', 'Chashu Ramen', 'Cold Ramen', 'Curry Ramen', 'Miso Ramen',
+                                'Shio Ramen', 'Shoyu Ramen', 'Tonkotsu Ramen')
+                               UNION
+                               SELECT Name FROM appetizer WHERE Name NOT IN ('Gyoza', 'Takoyaki', 'Edamame', 'Tempura', 'Siomai', 'Salad')"
+            cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
 
             While reader.Read()
                 Dim itemName As String = reader("Name").ToString()
-
-                ' Skip predefined items
-                If itemName = "Tofu" OrElse itemName = "Kimchi" OrElse itemName = "Nori" OrElse
-                itemName = "Corn" OrElse itemName = "Soft Boiled Egg" Then
-                    Continue While
-                End If
-
-                ' Create dynamic buttons for items not predefined
-                Dim itemButton As New Button()
-                itemButton.Text = itemName
-                itemButton.Tag = itemName
-
-                ' Add click event to handle item selection
-                AddHandler itemButton.Click, AddressOf ItemButton_Click
-
-                ' Add button to the panel
-                Panel_AO.Controls.Add(itemButton)
             End While
+
         Catch ex As Exception
-            MessageBox.Show("Error loading addons: " & ex.Message)
+            MessageBox.Show("Error loading menu items: " & ex.Message)
         Finally
             reader?.Close()
-            conn?.Close()  ' Close the connection eme
+            conn?.Close()
         End Try
     End Sub
 
@@ -173,7 +193,16 @@ Public Class Form1
         Panel_AO.Visible = True
     End Sub
 
-    Private Sub AddonButton_Click(sender As Object, e As EventArgs) Handles bttn_AOtofu.Click, bttn_AOkimchi.Click, bttn_AOnori.Click, bttn_AOcorn.Click, bttn_AOsoftBoiledegg.Click
+    Private Sub AddonButton_Click(sender As Object, e As EventArgs) Handles bttn_AOtofu.Click, bttn_AOkimchi.Click,
+        bttn_AOnori.Click, bttn_AOcorn.Click, bttn_AOsoftBoiledegg.Click,
+        bttn_DRcocaCola.Click, bttn_DRicedTea.Click, bttn_DRmirinda.Click,
+        bttn_DRpepsi.Click, bttn_DRsake.Click, bttn_DRsprite.Click, bttn_DRwater.Click,
+        bttn_Dbingsu.Click, bttn_DiceCream.Click, bttn_Dmochi.Click, bttn_MCbeefRamen.Click,
+        bttn_MCchashuRamen.Click, bttn_MCcoldRamen.Click, bttn_MCcurryRamen.Click,
+        bttn_MCmisoRamen.Click, bttn_MCshioRamen.Click, bttn_MCshoyuRamen.Click,
+        bttn_MCtonkotsuRamen.Click, bttn_Agyoza.Click, bttn_Atakoyaki.Click, bttn_Aedamame.Click,
+        bttn_Atempura.Click, bttn_Asiomai.Click, bttn_Asalad.Click
+
         Dim button As Button = DirectCast(sender, Button)
         Dim item As String = button.Tag.ToString()
         AddItem(item)
@@ -197,7 +226,17 @@ Public Class Form1
         Dim price As Decimal = 0D
         Try
             If conn.State = ConnectionState.Closed Then conn.Open()
-            cmd = New MySqlCommand("SELECT COALESCE(price, 0) FROM addons WHERE Name = @Name", conn)
+            cmd = New MySqlCommand("SELECT COALESCE(price, 0) FROM (
+                                    SELECT price FROM addons WHERE Name = @Name
+                                    UNION
+                                    SELECT price FROM drinks WHERE Name = @Name
+                                    UNION
+                                    SELECT price FROM desserts WHERE Name = @Name
+                                    UNION
+                                    SELECT price FROM maincourse WHERE Name = @Name
+                                    UNION
+                                    SELECT price FROM appetizer WHERE Name = @Name
+                                ) AS PriceResult LIMIT 1", conn)
             cmd.Parameters.AddWithValue("@Name", item)
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing AndAlso Not IsDBNull(result) Then
