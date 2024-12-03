@@ -9,14 +9,21 @@ Public Class Form3
     End Sub
 
     Public Sub UpdateLabel(itemList As String, Optional subtotalValue As Decimal = 0D)
-        ' Set item list and subtotal based on shared data
-        Label_ListofOrder.Text = itemList
+        ' Clear existing items in the ListBox before updating
+        ListBox1_ListofOrder.Items.Clear()
+
+        ' Split the item list by line and add them to the ListBox
+        Dim items As String() = itemList.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+        For Each item As String In items
+            ListBox1_ListofOrder.Items.Add(item)
+        Next
+
+        ' Update the subtotal label
         Subtotal.Text = Format(subtotalValue, "C2") ' Update the subtotal
 
         ' Update the discount and total after updating subtotal
         UpdateTotal()
     End Sub
-
 
     Private Sub UpdateTotal()
         Dim subtotalValue As Decimal

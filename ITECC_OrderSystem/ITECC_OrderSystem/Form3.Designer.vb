@@ -23,6 +23,9 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel_Left = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ListBox1_CustomRamen = New System.Windows.Forms.ListBox()
+        Me.ListBox1_ListofOrder = New System.Windows.Forms.ListBox()
         Me.Label_ListofOrder = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel_TopRight = New System.Windows.Forms.Panel()
@@ -48,6 +51,9 @@ Partial Class Form3
         'Panel_Left
         '
         Me.Panel_Left.BackColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Panel_Left.Controls.Add(Me.Label2)
+        Me.Panel_Left.Controls.Add(Me.ListBox1_CustomRamen)
+        Me.Panel_Left.Controls.Add(Me.ListBox1_ListofOrder)
         Me.Panel_Left.Controls.Add(Me.Label_ListofOrder)
         Me.Panel_Left.Controls.Add(Me.Label1)
         Me.Panel_Left.Dock = System.Windows.Forms.DockStyle.Left
@@ -56,13 +62,41 @@ Partial Class Form3
         Me.Panel_Left.Size = New System.Drawing.Size(666, 539)
         Me.Panel_Left.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Javanese Text", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(403, 150)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(151, 31)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Custom Ramen"
+        '
+        'ListBox1_CustomRamen
+        '
+        Me.ListBox1_CustomRamen.FormattingEnabled = True
+        Me.ListBox1_CustomRamen.ItemHeight = 20
+        Me.ListBox1_CustomRamen.Location = New System.Drawing.Point(348, 184)
+        Me.ListBox1_CustomRamen.Name = "ListBox1_CustomRamen"
+        Me.ListBox1_CustomRamen.Size = New System.Drawing.Size(265, 124)
+        Me.ListBox1_CustomRamen.TabIndex = 3
+        '
+        'ListBox1_ListofOrder
+        '
+        Me.ListBox1_ListofOrder.FormattingEnabled = True
+        Me.ListBox1_ListofOrder.ItemHeight = 20
+        Me.ListBox1_ListofOrder.Location = New System.Drawing.Point(39, 184)
+        Me.ListBox1_ListofOrder.Name = "ListBox1_ListofOrder"
+        Me.ListBox1_ListofOrder.Size = New System.Drawing.Size(265, 124)
+        Me.ListBox1_ListofOrder.TabIndex = 2
+        '
         'Label_ListofOrder
         '
         Me.Label_ListofOrder.Font = New System.Drawing.Font("Javanese Text", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label_ListofOrder.ForeColor = System.Drawing.Color.Black
-        Me.Label_ListofOrder.Location = New System.Drawing.Point(72, 147)
+        Me.Label_ListofOrder.Location = New System.Drawing.Point(99, 147)
         Me.Label_ListofOrder.Name = "Label_ListofOrder"
-        Me.Label_ListofOrder.Size = New System.Drawing.Size(364, 365)
+        Me.Label_ListofOrder.Size = New System.Drawing.Size(167, 31)
         Me.Label_ListofOrder.TabIndex = 1
         Me.Label_ListofOrder.Text = "Label2"
         '
@@ -280,4 +314,7 @@ Partial Class Form3
     Friend WithEvents standardDelivery As Label
     Friend WithEvents Total As Label
     Friend WithEvents Label_TotalTitle As Label
+    Friend WithEvents ListBox1_ListofOrder As ListBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ListBox1_CustomRamen As ListBox
 End Class

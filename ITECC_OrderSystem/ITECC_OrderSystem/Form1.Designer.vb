@@ -270,7 +270,7 @@ Partial Class Form1
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 37)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(178, 490)
+        Me.Panel3.Size = New System.Drawing.Size(178, 502)
         Me.Panel3.TabIndex = 7
         '
         'Label_AboutInfo

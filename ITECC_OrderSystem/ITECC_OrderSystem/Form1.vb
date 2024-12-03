@@ -20,8 +20,20 @@ Public Class Form1
 
         If AboutInfo.Width > CollapsedWidth Then
             TimerPanel_Collapse.Enabled = True
+            Brojan.Visible = False
+            PictureBox1.Visible = False
+            Label_AboutInfo.Visible = False
+            PictureBox2.Visible = False
+            PictureBox3.Visible = False
+            PictureBox4.Visible = False
         Else
             TimerPanel_Extend.Enabled = True
+            Brojan.Visible = True
+            PictureBox1.Visible = True
+            Label_AboutInfo.Visible = True
+            PictureBox2.Visible = True
+            PictureBox3.Visible = True
+            PictureBox4.Visible = True
         End If
     End Sub
 
@@ -122,6 +134,13 @@ Public Class Form1
     Private Sub bttn_appetizer_Click(sender As Object, e As EventArgs) Handles bttn_appetizer.Click
         Panel_appetizer.Height = bttn_appetizer.Height
         Panel_appetizer.Top = bttn_appetizer.Top
+        Panel_appetizer.Visible = True
+        Panel_addons.Visible = False
+        Panel_maincourse.Visible = False
+        Panel_dessert.Visible = False
+        Panel_drinks.Visible = False
+        Panel_promos.Visible = False
+        Panel_makeurownramen.Visible = False
         Panel_A.Visible = True
         Panel_MC.Visible = False
         Panel_D.Visible = False
@@ -132,6 +151,13 @@ Public Class Form1
     Private Sub Panel_AO_Paint(sender As Object, e As PaintEventArgs) Handles Panel_AO.Paint
         Panel_addons.Height = bttn_addons.Height
         Panel_addons.Top = bttn_addons.Top
+        Panel_appetizer.Visible = False
+        Panel_addons.Visible = True
+        Panel_maincourse.Visible = False
+        Panel_dessert.Visible = False
+        Panel_drinks.Visible = False
+        Panel_promos.Visible = False
+        Panel_makeurownramen.Visible = False
         Panel_A.Visible = False
         Panel_MC.Visible = False
         Panel_D.Visible = False
@@ -142,6 +168,13 @@ Public Class Form1
     Private Sub bttn_maincourse_Click(sender As Object, e As EventArgs) Handles bttn_maincourse.Click
         Panel_maincourse.Height = bttn_maincourse.Height
         Panel_maincourse.Top = bttn_maincourse.Top
+        Panel_appetizer.Visible = False
+        Panel_addons.Visible = False
+        Panel_maincourse.Visible = True
+        Panel_dessert.Visible = False
+        Panel_drinks.Visible = False
+        Panel_promos.Visible = False
+        Panel_makeurownramen.Visible = False
         Panel_A.Visible = False
         Panel_MC.Visible = True
         Panel_D.Visible = False
@@ -152,6 +185,13 @@ Public Class Form1
     Private Sub bttn_dessert_Click(sender As Object, e As EventArgs) Handles bttn_dessert.Click
         Panel_dessert.Height = bttn_dessert.Height
         Panel_dessert.Top = bttn_dessert.Top
+        Panel_appetizer.Visible = False
+        Panel_addons.Visible = False
+        Panel_maincourse.Visible = False
+        Panel_dessert.Visible = True
+        Panel_drinks.Visible = False
+        Panel_promos.Visible = False
+        Panel_makeurownramen.Visible = False
         Panel_A.Visible = False
         Panel_MC.Visible = False
         Panel_D.Visible = True
@@ -162,6 +202,13 @@ Public Class Form1
     Private Sub bttn_drinks_Click(sender As Object, e As EventArgs) Handles bttn_drinks.Click
         Panel_drinks.Height = bttn_drinks.Height
         Panel_drinks.Top = bttn_drinks.Top
+        Panel_appetizer.Visible = False
+        Panel_addons.Visible = False
+        Panel_maincourse.Visible = False
+        Panel_dessert.Visible = False
+        Panel_drinks.Visible = True
+        Panel_promos.Visible = False
+        Panel_makeurownramen.Visible = False
         Panel_A.Visible = False
         Panel_MC.Visible = False
         Panel_D.Visible = False

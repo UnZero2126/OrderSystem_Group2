@@ -279,5 +279,8 @@ Public Class Form2
         End Try
     End Sub
 
-
+    Private Sub bttn_cart_Click(sender As Object, e As EventArgs) Handles bttn_cart.Click
+        Form3.Show()
+        Me.Hide()
+    End Sub
 End Class
