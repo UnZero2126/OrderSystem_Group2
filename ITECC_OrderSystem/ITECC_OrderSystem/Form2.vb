@@ -111,7 +111,7 @@ Public Class Form2
             Label9.Text = "Wavy"
         End If
 
-        ' For Protein selection
+        ' Protein selection
         Dim selectedProteinCount As Integer = 0
         Dim selectedProteinName As String = ""
 
@@ -146,7 +146,7 @@ Public Class Form2
             Label3.Text = selectedProteinCount.ToString() & " Items"
         End If
 
-        ' For Toppings selection
+        ' Toppings selection
         Dim selectedToppingsCount As Integer = 0
         Dim selectedToppingsName As String = ""
 
@@ -181,7 +181,7 @@ Public Class Form2
             Label2.Text = selectedToppingsCount.ToString() & " Items"
         End If
 
-        ' For Extra Flavors selection
+        ' Extra Flavors selection
         Dim selectedEFCount As Integer = 0
         Dim selectedEFName As String = ""
 
@@ -222,7 +222,7 @@ Public Class Form2
 
         Try
             If conn.State = ConnectionState.Closed Then conn.Open()
-
+            'di pa taposs to add whats beloww
             ' Add size, broth, noodles, proteins, toppings, and extra flavors
             If Label5.Text <> "" Then selectedItems.Add(Label5.Text)
             If Label7.Text <> "" Then selectedItems.Add(Label7.Text)
@@ -245,7 +245,7 @@ Public Class Form2
             If CB_Vinegar.Checked Then selectedItems.Add("Vinegar")
             If CB_BlackPepper.Checked Then selectedItems.Add("Black Pepper")
 
-            ' Fetch and sum up prices
+            ' get the prices and add
             For Each item As String In selectedItems
                 cmd = New MySqlCommand("SELECT price FROM makeyourownramen WHERE Name = @Name", conn)
                 cmd.Parameters.AddWithValue("@Name", item)
@@ -268,7 +268,7 @@ Public Class Form2
             ' Pass data to Form3
             Dim itemList As String = String.Join(Environment.NewLine, selectedItems)
             Dim form3 As New Form3()
-            form3.UpdateLabel(itemList, totalPrice) ' Ensure this method in Form3 is correctly updating labels
+            form3.UpdateLabel(itemList, totalPrice)
             form3.Show()
             Me.Close()
 

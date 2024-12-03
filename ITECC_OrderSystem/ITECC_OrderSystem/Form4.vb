@@ -5,7 +5,6 @@ Public Class Form4
 
     Public Sub New()
         InitializeComponent()
-        ' Initialize the shared connection
         SharedConnection = New MySqlConnection("server=127.0.0.1;userid=root;password=;database=ordering_system2;SslMode=None")
     End Sub
 
@@ -26,7 +25,7 @@ Public Class Form4
 
             If SharedConnection.State = ConnectionState.Closed Then SharedConnection.Open()
 
-            ' Query to retrieve discount percentage
+            ' Query retrieve discount percentage
             Dim query As String = "SELECT discountValue FROM voucher WHERE name = @voucherCode LIMIT 1"
             Using cmd As New MySqlCommand(query, SharedConnection)
                 cmd.Parameters.AddWithValue("@voucherCode", voucherCode)
@@ -36,7 +35,7 @@ Public Class Form4
                     discountPercent = Convert.ToDecimal(result)
                     MessageBox.Show($"Voucher applied! Discount: {discountPercent}% off", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' Update the global discount in SharedData
+                    ' Update global discount in SharedData
                     SharedData.AppliedDiscountPercent = discountPercent
                 Else
                     MessageBox.Show("Invalid voucher code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -51,11 +50,8 @@ Public Class Form4
             End If
         End Try
 
-        ' After voucher application, update Form3
         Form3.ApplyDiscount(SharedData.AppliedDiscountPercent)
     End Sub
-
-
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form3.Show()

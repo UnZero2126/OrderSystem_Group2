@@ -22,100 +22,101 @@ Partial Class Form7
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label_ForgotPWTitle = New Label()
-        TB_Email = New TextBox()
-        Label_Email = New Label()
-        TB_Username = New TextBox()
-        Label_Username = New Label()
-        bttn_Retrieve = New Button()
-        bttn_close = New Button()
-        SuspendLayout()
-        ' 
-        ' Label_ForgotPWTitle
-        ' 
-        Label_ForgotPWTitle.AutoSize = True
-        Label_ForgotPWTitle.Font = New Font("Javanese Text", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_ForgotPWTitle.Location = New Point(143, 47)
-        Label_ForgotPWTitle.Name = "Label_ForgotPWTitle"
-        Label_ForgotPWTitle.Size = New Size(222, 52)
-        Label_ForgotPWTitle.TabIndex = 2
-        Label_ForgotPWTitle.Text = "Retrieve Password"
-        ' 
-        ' TB_Email
-        ' 
-        TB_Email.Location = New Point(202, 144)
-        TB_Email.Name = "TB_Email"
-        TB_Email.Size = New Size(230, 27)
-        TB_Email.TabIndex = 15
-        ' 
-        ' Label_Email
-        ' 
-        Label_Email.AutoSize = True
-        Label_Email.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Email.Location = New Point(69, 138)
-        Label_Email.Name = "Label_Email"
-        Label_Email.Size = New Size(83, 45)
-        Label_Email.TabIndex = 14
-        Label_Email.Text = "Email:"
-        ' 
-        ' TB_Username
-        ' 
-        TB_Username.Location = New Point(202, 105)
-        TB_Username.Name = "TB_Username"
-        TB_Username.Size = New Size(230, 27)
-        TB_Username.TabIndex = 17
-        ' 
-        ' Label_Username
-        ' 
-        Label_Username.AutoSize = True
-        Label_Username.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Username.Location = New Point(69, 99)
-        Label_Username.Name = "Label_Username"
-        Label_Username.Size = New Size(123, 45)
-        Label_Username.TabIndex = 16
-        Label_Username.Text = "Username:"
-        ' 
-        ' bttn_Retrieve
-        ' 
-        bttn_Retrieve.FlatStyle = FlatStyle.Popup
-        bttn_Retrieve.Font = New Font("Javanese Text", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        bttn_Retrieve.Location = New Point(290, 195)
-        bttn_Retrieve.Name = "bttn_Retrieve"
-        bttn_Retrieve.Size = New Size(142, 37)
-        bttn_Retrieve.TabIndex = 19
-        bttn_Retrieve.Text = "Retrieve"
-        bttn_Retrieve.UseVisualStyleBackColor = True
-        ' 
-        ' bttn_close
-        ' 
-        bttn_close.FlatStyle = FlatStyle.Popup
-        bttn_close.Font = New Font("Javanese Text", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        bttn_close.Location = New Point(69, 195)
-        bttn_close.Name = "bttn_close"
-        bttn_close.Size = New Size(142, 37)
-        bttn_close.TabIndex = 20
-        bttn_close.Text = "Close"
-        bttn_close.UseVisualStyleBackColor = True
-        ' 
-        ' Form7
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Cornsilk
-        ClientSize = New Size(504, 292)
-        Controls.Add(bttn_close)
-        Controls.Add(bttn_Retrieve)
-        Controls.Add(TB_Username)
-        Controls.Add(Label_Username)
-        Controls.Add(TB_Email)
-        Controls.Add(Label_Email)
-        Controls.Add(Label_ForgotPWTitle)
-        FormBorderStyle = FormBorderStyle.None
-        Name = "Form7"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Retrieve Password"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label_ForgotPWTitle = New System.Windows.Forms.Label()
+        Me.TB_Email = New System.Windows.Forms.TextBox()
+        Me.Label_Email = New System.Windows.Forms.Label()
+        Me.TB_Username = New System.Windows.Forms.TextBox()
+        Me.Label_Username = New System.Windows.Forms.Label()
+        Me.bttn_Retrieve = New System.Windows.Forms.Button()
+        Me.bttn_close = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'Label_ForgotPWTitle
+        '
+        Me.Label_ForgotPWTitle.AutoSize = True
+        Me.Label_ForgotPWTitle.Font = New System.Drawing.Font("Javanese Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_ForgotPWTitle.Location = New System.Drawing.Point(143, 47)
+        Me.Label_ForgotPWTitle.Name = "Label_ForgotPWTitle"
+        Me.Label_ForgotPWTitle.Size = New System.Drawing.Size(222, 52)
+        Me.Label_ForgotPWTitle.TabIndex = 2
+        Me.Label_ForgotPWTitle.Text = "Retrieve Password"
+        '
+        'TB_Email
+        '
+        Me.TB_Email.Location = New System.Drawing.Point(202, 144)
+        Me.TB_Email.Name = "TB_Email"
+        Me.TB_Email.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Email.TabIndex = 15
+        '
+        'Label_Email
+        '
+        Me.Label_Email.AutoSize = True
+        Me.Label_Email.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Email.Location = New System.Drawing.Point(69, 138)
+        Me.Label_Email.Name = "Label_Email"
+        Me.Label_Email.Size = New System.Drawing.Size(83, 45)
+        Me.Label_Email.TabIndex = 14
+        Me.Label_Email.Text = "Email:"
+        '
+        'TB_Username
+        '
+        Me.TB_Username.Location = New System.Drawing.Point(202, 105)
+        Me.TB_Username.Name = "TB_Username"
+        Me.TB_Username.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Username.TabIndex = 17
+        '
+        'Label_Username
+        '
+        Me.Label_Username.AutoSize = True
+        Me.Label_Username.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Username.Location = New System.Drawing.Point(69, 99)
+        Me.Label_Username.Name = "Label_Username"
+        Me.Label_Username.Size = New System.Drawing.Size(123, 45)
+        Me.Label_Username.TabIndex = 16
+        Me.Label_Username.Text = "Username:"
+        '
+        'bttn_Retrieve
+        '
+        Me.bttn_Retrieve.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bttn_Retrieve.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.bttn_Retrieve.Location = New System.Drawing.Point(290, 195)
+        Me.bttn_Retrieve.Name = "bttn_Retrieve"
+        Me.bttn_Retrieve.Size = New System.Drawing.Size(142, 37)
+        Me.bttn_Retrieve.TabIndex = 19
+        Me.bttn_Retrieve.Text = "Retrieve"
+        Me.bttn_Retrieve.UseVisualStyleBackColor = True
+        '
+        'bttn_close
+        '
+        Me.bttn_close.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bttn_close.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.bttn_close.Location = New System.Drawing.Point(69, 195)
+        Me.bttn_close.Name = "bttn_close"
+        Me.bttn_close.Size = New System.Drawing.Size(142, 37)
+        Me.bttn_close.TabIndex = 20
+        Me.bttn_close.Text = "Close"
+        Me.bttn_close.UseVisualStyleBackColor = True
+        '
+        'Form7
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Cornsilk
+        Me.ClientSize = New System.Drawing.Size(504, 292)
+        Me.Controls.Add(Me.bttn_close)
+        Me.Controls.Add(Me.bttn_Retrieve)
+        Me.Controls.Add(Me.TB_Username)
+        Me.Controls.Add(Me.Label_Username)
+        Me.Controls.Add(Me.TB_Email)
+        Me.Controls.Add(Me.Label_Email)
+        Me.Controls.Add(Me.Label_ForgotPWTitle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Form7"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Retrieve Password"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label_ForgotPWTitle As Label

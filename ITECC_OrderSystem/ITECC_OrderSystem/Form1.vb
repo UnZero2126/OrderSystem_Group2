@@ -59,7 +59,6 @@ Public Class Form1
         Try
             conn.Open()
 
-            ' Assign tags to predefined buttons 
             bttn_AOtofu.Tag = "Tofu"
             bttn_AOkimchi.Tag = "Kimchi"
             bttn_AOnori.Tag = "Nori"
@@ -253,7 +252,6 @@ Public Class Form1
         AddItem(item)
     End Sub
     Private Sub AddItem(item As String)
-        ' Add item to the global SharedData
         If SharedData.AppliedItems.ContainsKey(item) Then
             SharedData.AppliedItems(item) += 1
         Else
@@ -263,7 +261,7 @@ Public Class Form1
         ' Recalculate subtotal
         SharedData.AppliedSubtotal = CalculateSubtotal()
 
-        ' Update Form3 with the latest values
+        ' Update Form3 latest orders
         If Form3 IsNot Nothing AndAlso Form3.Visible Then
             Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
         End If
