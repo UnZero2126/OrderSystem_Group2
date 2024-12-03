@@ -22,232 +22,233 @@ Partial Class Form6
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label_SignUpTitle = New Label()
-        PB_Logo = New PictureBox()
-        TB_FirstName = New TextBox()
-        Label_firstName = New Label()
-        TB_LastName = New TextBox()
-        Label_lastName = New Label()
-        TB_PhoneNo = New TextBox()
-        Label_PhoneNo = New Label()
-        TB_Address = New TextBox()
-        Label_Address = New Label()
-        TB_Email = New TextBox()
-        Label_Email = New Label()
-        TB_Password = New TextBox()
-        Label_Password = New Label()
-        TB_Username = New TextBox()
-        Label_Username = New Label()
-        bttn_GoLogIn = New Button()
-        Button2 = New Button()
-        Label_GoLogin = New Label()
-        CType(PB_Logo, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Label_SignUpTitle
-        ' 
-        Label_SignUpTitle.AutoSize = True
-        Label_SignUpTitle.Font = New Font("Javanese Text", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_SignUpTitle.Location = New Point(303, 19)
-        Label_SignUpTitle.Name = "Label_SignUpTitle"
-        Label_SignUpTitle.Size = New Size(225, 52)
-        Label_SignUpTitle.TabIndex = 1
-        Label_SignUpTitle.Text = "Create an Account"
-        ' 
-        ' PB_Logo
-        ' 
-        PB_Logo.BackgroundImage = My.Resources.Resources.IMG_2774
-        PB_Logo.BackgroundImageLayout = ImageLayout.Zoom
-        PB_Logo.Location = New Point(36, 39)
-        PB_Logo.Name = "PB_Logo"
-        PB_Logo.Size = New Size(173, 237)
-        PB_Logo.TabIndex = 2
-        PB_Logo.TabStop = False
-        ' 
-        ' TB_FirstName
-        ' 
-        TB_FirstName.Location = New Point(372, 87)
-        TB_FirstName.Name = "TB_FirstName"
-        TB_FirstName.Size = New Size(230, 27)
-        TB_FirstName.TabIndex = 5
-        ' 
-        ' Label_firstName
-        ' 
-        Label_firstName.AutoSize = True
-        Label_firstName.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_firstName.Location = New Point(239, 81)
-        Label_firstName.Name = "Label_firstName"
-        Label_firstName.Size = New Size(134, 45)
-        Label_firstName.TabIndex = 4
-        Label_firstName.Text = "First Name:"
-        ' 
-        ' TB_LastName
-        ' 
-        TB_LastName.Location = New Point(372, 129)
-        TB_LastName.Name = "TB_LastName"
-        TB_LastName.Size = New Size(230, 27)
-        TB_LastName.TabIndex = 7
-        ' 
-        ' Label_lastName
-        ' 
-        Label_lastName.AutoSize = True
-        Label_lastName.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_lastName.Location = New Point(239, 123)
-        Label_lastName.Name = "Label_lastName"
-        Label_lastName.Size = New Size(129, 45)
-        Label_lastName.TabIndex = 6
-        Label_lastName.Text = "Last Name:"
-        ' 
-        ' TB_PhoneNo
-        ' 
-        TB_PhoneNo.Location = New Point(372, 176)
-        TB_PhoneNo.Name = "TB_PhoneNo"
-        TB_PhoneNo.Size = New Size(230, 27)
-        TB_PhoneNo.TabIndex = 9
-        ' 
-        ' Label_PhoneNo
-        ' 
-        Label_PhoneNo.AutoSize = True
-        Label_PhoneNo.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_PhoneNo.Location = New Point(239, 170)
-        Label_PhoneNo.Name = "Label_PhoneNo"
-        Label_PhoneNo.Size = New Size(126, 45)
-        Label_PhoneNo.TabIndex = 8
-        Label_PhoneNo.Text = "Phone No.:"
-        ' 
-        ' TB_Address
-        ' 
-        TB_Address.Location = New Point(372, 221)
-        TB_Address.Name = "TB_Address"
-        TB_Address.Size = New Size(230, 27)
-        TB_Address.TabIndex = 11
-        ' 
-        ' Label_Address
-        ' 
-        Label_Address.AutoSize = True
-        Label_Address.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Address.Location = New Point(239, 215)
-        Label_Address.Name = "Label_Address"
-        Label_Address.Size = New Size(104, 45)
-        Label_Address.TabIndex = 10
-        Label_Address.Text = "Address:"
-        ' 
-        ' TB_Email
-        ' 
-        TB_Email.Location = New Point(372, 269)
-        TB_Email.Name = "TB_Email"
-        TB_Email.Size = New Size(230, 27)
-        TB_Email.TabIndex = 13
-        ' 
-        ' Label_Email
-        ' 
-        Label_Email.AutoSize = True
-        Label_Email.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Email.Location = New Point(239, 263)
-        Label_Email.Name = "Label_Email"
-        Label_Email.Size = New Size(83, 45)
-        Label_Email.TabIndex = 12
-        Label_Email.Text = "Email:"
-        ' 
-        ' TB_Password
-        ' 
-        TB_Password.Location = New Point(372, 360)
-        TB_Password.Name = "TB_Password"
-        TB_Password.Size = New Size(230, 27)
-        TB_Password.TabIndex = 17
-        TB_Password.UseSystemPasswordChar = True
-        ' 
-        ' Label_Password
-        ' 
-        Label_Password.AutoSize = True
-        Label_Password.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Password.Location = New Point(239, 354)
-        Label_Password.Name = "Label_Password"
-        Label_Password.Size = New Size(116, 45)
-        Label_Password.TabIndex = 16
-        Label_Password.Text = "Password:"
-        ' 
-        ' TB_Username
-        ' 
-        TB_Username.Location = New Point(372, 312)
-        TB_Username.Name = "TB_Username"
-        TB_Username.Size = New Size(230, 27)
-        TB_Username.TabIndex = 15
-        ' 
-        ' Label_Username
-        ' 
-        Label_Username.AutoSize = True
-        Label_Username.Font = New Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_Username.Location = New Point(239, 306)
-        Label_Username.Name = "Label_Username"
-        Label_Username.Size = New Size(123, 45)
-        Label_Username.TabIndex = 14
-        Label_Username.Text = "Username:"
-        ' 
-        ' bttn_GoLogIn
-        ' 
-        bttn_GoLogIn.FlatStyle = FlatStyle.Popup
-        bttn_GoLogIn.Font = New Font("Javanese Text", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        bttn_GoLogIn.Location = New Point(36, 306)
-        bttn_GoLogIn.Name = "bttn_GoLogIn"
-        bttn_GoLogIn.Size = New Size(173, 37)
-        bttn_GoLogIn.TabIndex = 18
-        bttn_GoLogIn.Text = "Log In"
-        bttn_GoLogIn.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.FlatStyle = FlatStyle.Popup
-        Button2.Font = New Font("Javanese Text", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button2.Location = New Point(36, 363)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(173, 39)
-        Button2.TabIndex = 19
-        Button2.Text = "Create Account"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Label_GoLogin
-        ' 
-        Label_GoLogin.AutoSize = True
-        Label_GoLogin.Font = New Font("Javanese Text", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_GoLogin.Location = New Point(24, 281)
-        Label_GoLogin.Name = "Label_GoLogin"
-        Label_GoLogin.Size = New Size(201, 34)
-        Label_GoLogin.TabIndex = 20
-        Label_GoLogin.Text = "Already have an account?"
-        ' 
-        ' Form6
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        AutoScroll = True
-        BackColor = Color.Cornsilk
-        ClientSize = New Size(646, 422)
-        Controls.Add(Label_GoLogin)
-        Controls.Add(Button2)
-        Controls.Add(bttn_GoLogIn)
-        Controls.Add(TB_Password)
-        Controls.Add(Label_Password)
-        Controls.Add(TB_Username)
-        Controls.Add(Label_Username)
-        Controls.Add(TB_Email)
-        Controls.Add(Label_Email)
-        Controls.Add(TB_Address)
-        Controls.Add(Label_Address)
-        Controls.Add(TB_PhoneNo)
-        Controls.Add(Label_PhoneNo)
-        Controls.Add(TB_LastName)
-        Controls.Add(Label_lastName)
-        Controls.Add(TB_FirstName)
-        Controls.Add(Label_firstName)
-        Controls.Add(PB_Logo)
-        Controls.Add(Label_SignUpTitle)
-        Name = "Form6"
-        RightToLeftLayout = True
-        Text = "Sign up"
-        CType(PB_Logo, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label_SignUpTitle = New System.Windows.Forms.Label()
+        Me.PB_Logo = New System.Windows.Forms.PictureBox()
+        Me.TB_FirstName = New System.Windows.Forms.TextBox()
+        Me.Label_firstName = New System.Windows.Forms.Label()
+        Me.TB_LastName = New System.Windows.Forms.TextBox()
+        Me.Label_lastName = New System.Windows.Forms.Label()
+        Me.TB_PhoneNo = New System.Windows.Forms.TextBox()
+        Me.Label_PhoneNo = New System.Windows.Forms.Label()
+        Me.TB_Address = New System.Windows.Forms.TextBox()
+        Me.Label_Address = New System.Windows.Forms.Label()
+        Me.TB_Email = New System.Windows.Forms.TextBox()
+        Me.Label_Email = New System.Windows.Forms.Label()
+        Me.TB_Password = New System.Windows.Forms.TextBox()
+        Me.Label_Password = New System.Windows.Forms.Label()
+        Me.TB_Username = New System.Windows.Forms.TextBox()
+        Me.Label_Username = New System.Windows.Forms.Label()
+        Me.bttn_GoLogIn = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label_GoLogin = New System.Windows.Forms.Label()
+        CType(Me.PB_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Label_SignUpTitle
+        '
+        Me.Label_SignUpTitle.AutoSize = True
+        Me.Label_SignUpTitle.Font = New System.Drawing.Font("Javanese Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_SignUpTitle.Location = New System.Drawing.Point(303, 19)
+        Me.Label_SignUpTitle.Name = "Label_SignUpTitle"
+        Me.Label_SignUpTitle.Size = New System.Drawing.Size(225, 52)
+        Me.Label_SignUpTitle.TabIndex = 1
+        Me.Label_SignUpTitle.Text = "Create an Account"
+        '
+        'PB_Logo
+        '
+        Me.PB_Logo.BackgroundImage = Global.ITECC_OrderSystem.My.Resources.Resources.IMG_2774
+        Me.PB_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PB_Logo.Location = New System.Drawing.Point(36, 39)
+        Me.PB_Logo.Name = "PB_Logo"
+        Me.PB_Logo.Size = New System.Drawing.Size(173, 237)
+        Me.PB_Logo.TabIndex = 2
+        Me.PB_Logo.TabStop = False
+        '
+        'TB_FirstName
+        '
+        Me.TB_FirstName.Location = New System.Drawing.Point(372, 87)
+        Me.TB_FirstName.Name = "TB_FirstName"
+        Me.TB_FirstName.Size = New System.Drawing.Size(230, 27)
+        Me.TB_FirstName.TabIndex = 5
+        '
+        'Label_firstName
+        '
+        Me.Label_firstName.AutoSize = True
+        Me.Label_firstName.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_firstName.Location = New System.Drawing.Point(239, 81)
+        Me.Label_firstName.Name = "Label_firstName"
+        Me.Label_firstName.Size = New System.Drawing.Size(134, 45)
+        Me.Label_firstName.TabIndex = 4
+        Me.Label_firstName.Text = "First Name:"
+        '
+        'TB_LastName
+        '
+        Me.TB_LastName.Location = New System.Drawing.Point(372, 129)
+        Me.TB_LastName.Name = "TB_LastName"
+        Me.TB_LastName.Size = New System.Drawing.Size(230, 27)
+        Me.TB_LastName.TabIndex = 7
+        '
+        'Label_lastName
+        '
+        Me.Label_lastName.AutoSize = True
+        Me.Label_lastName.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_lastName.Location = New System.Drawing.Point(239, 123)
+        Me.Label_lastName.Name = "Label_lastName"
+        Me.Label_lastName.Size = New System.Drawing.Size(129, 45)
+        Me.Label_lastName.TabIndex = 6
+        Me.Label_lastName.Text = "Last Name:"
+        '
+        'TB_PhoneNo
+        '
+        Me.TB_PhoneNo.Location = New System.Drawing.Point(372, 176)
+        Me.TB_PhoneNo.Name = "TB_PhoneNo"
+        Me.TB_PhoneNo.Size = New System.Drawing.Size(230, 27)
+        Me.TB_PhoneNo.TabIndex = 9
+        '
+        'Label_PhoneNo
+        '
+        Me.Label_PhoneNo.AutoSize = True
+        Me.Label_PhoneNo.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_PhoneNo.Location = New System.Drawing.Point(239, 170)
+        Me.Label_PhoneNo.Name = "Label_PhoneNo"
+        Me.Label_PhoneNo.Size = New System.Drawing.Size(126, 45)
+        Me.Label_PhoneNo.TabIndex = 8
+        Me.Label_PhoneNo.Text = "Phone No.:"
+        '
+        'TB_Address
+        '
+        Me.TB_Address.Location = New System.Drawing.Point(372, 221)
+        Me.TB_Address.Name = "TB_Address"
+        Me.TB_Address.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Address.TabIndex = 11
+        '
+        'Label_Address
+        '
+        Me.Label_Address.AutoSize = True
+        Me.Label_Address.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Address.Location = New System.Drawing.Point(239, 215)
+        Me.Label_Address.Name = "Label_Address"
+        Me.Label_Address.Size = New System.Drawing.Size(104, 45)
+        Me.Label_Address.TabIndex = 10
+        Me.Label_Address.Text = "Address:"
+        '
+        'TB_Email
+        '
+        Me.TB_Email.Location = New System.Drawing.Point(372, 269)
+        Me.TB_Email.Name = "TB_Email"
+        Me.TB_Email.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Email.TabIndex = 13
+        '
+        'Label_Email
+        '
+        Me.Label_Email.AutoSize = True
+        Me.Label_Email.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Email.Location = New System.Drawing.Point(239, 263)
+        Me.Label_Email.Name = "Label_Email"
+        Me.Label_Email.Size = New System.Drawing.Size(83, 45)
+        Me.Label_Email.TabIndex = 12
+        Me.Label_Email.Text = "Email:"
+        '
+        'TB_Password
+        '
+        Me.TB_Password.Location = New System.Drawing.Point(372, 360)
+        Me.TB_Password.Name = "TB_Password"
+        Me.TB_Password.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Password.TabIndex = 17
+        Me.TB_Password.UseSystemPasswordChar = True
+        '
+        'Label_Password
+        '
+        Me.Label_Password.AutoSize = True
+        Me.Label_Password.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Password.Location = New System.Drawing.Point(239, 354)
+        Me.Label_Password.Name = "Label_Password"
+        Me.Label_Password.Size = New System.Drawing.Size(116, 45)
+        Me.Label_Password.TabIndex = 16
+        Me.Label_Password.Text = "Password:"
+        '
+        'TB_Username
+        '
+        Me.TB_Username.Location = New System.Drawing.Point(372, 312)
+        Me.TB_Username.Name = "TB_Username"
+        Me.TB_Username.Size = New System.Drawing.Size(230, 27)
+        Me.TB_Username.TabIndex = 15
+        '
+        'Label_Username
+        '
+        Me.Label_Username.AutoSize = True
+        Me.Label_Username.Font = New System.Drawing.Font("Javanese Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_Username.Location = New System.Drawing.Point(239, 306)
+        Me.Label_Username.Name = "Label_Username"
+        Me.Label_Username.Size = New System.Drawing.Size(123, 45)
+        Me.Label_Username.TabIndex = 14
+        Me.Label_Username.Text = "Username:"
+        '
+        'bttn_GoLogIn
+        '
+        Me.bttn_GoLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bttn_GoLogIn.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.bttn_GoLogIn.Location = New System.Drawing.Point(36, 306)
+        Me.bttn_GoLogIn.Name = "bttn_GoLogIn"
+        Me.bttn_GoLogIn.Size = New System.Drawing.Size(173, 37)
+        Me.bttn_GoLogIn.TabIndex = 18
+        Me.bttn_GoLogIn.Text = "Log In"
+        Me.bttn_GoLogIn.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.Location = New System.Drawing.Point(36, 363)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(173, 39)
+        Me.Button2.TabIndex = 19
+        Me.Button2.Text = "Create Account"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label_GoLogin
+        '
+        Me.Label_GoLogin.AutoSize = True
+        Me.Label_GoLogin.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label_GoLogin.Location = New System.Drawing.Point(24, 281)
+        Me.Label_GoLogin.Name = "Label_GoLogin"
+        Me.Label_GoLogin.Size = New System.Drawing.Size(201, 34)
+        Me.Label_GoLogin.TabIndex = 20
+        Me.Label_GoLogin.Text = "Already have an account?"
+        '
+        'Form6
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.Cornsilk
+        Me.ClientSize = New System.Drawing.Size(646, 422)
+        Me.Controls.Add(Me.Label_GoLogin)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.bttn_GoLogIn)
+        Me.Controls.Add(Me.TB_Password)
+        Me.Controls.Add(Me.Label_Password)
+        Me.Controls.Add(Me.TB_Username)
+        Me.Controls.Add(Me.Label_Username)
+        Me.Controls.Add(Me.TB_Email)
+        Me.Controls.Add(Me.Label_Email)
+        Me.Controls.Add(Me.TB_Address)
+        Me.Controls.Add(Me.Label_Address)
+        Me.Controls.Add(Me.TB_PhoneNo)
+        Me.Controls.Add(Me.Label_PhoneNo)
+        Me.Controls.Add(Me.TB_LastName)
+        Me.Controls.Add(Me.Label_lastName)
+        Me.Controls.Add(Me.TB_FirstName)
+        Me.Controls.Add(Me.Label_firstName)
+        Me.Controls.Add(Me.PB_Logo)
+        Me.Controls.Add(Me.Label_SignUpTitle)
+        Me.Name = "Form6"
+        Me.RightToLeftLayout = True
+        Me.Text = "Sign up"
+        CType(Me.PB_Logo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label_SignUpTitle As Label

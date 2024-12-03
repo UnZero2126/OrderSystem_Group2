@@ -322,4 +322,9 @@ Public Class Form1
         Me.Hide()
     End Sub
 
+    Private Sub bttn_account_Click(sender As Object, e As EventArgs) Handles bttn_account.Click
+        Form5.Show()
+        Me.Hide()
+
+    End Sub
 End Class
