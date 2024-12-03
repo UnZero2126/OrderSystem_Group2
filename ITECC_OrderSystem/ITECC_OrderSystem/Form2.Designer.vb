@@ -54,11 +54,11 @@ Partial Class Form2
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel_ChosenToppings = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel_ChosenProteins = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel_ChosenNoodles = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -563,9 +563,9 @@ Partial Class Form2
         Me.Panel_ChosenExtraFlavor.Controls.Add(Me.Label16)
         Me.Panel_ChosenExtraFlavor.Controls.Add(Me.Label14)
         Me.Panel_ChosenExtraFlavor.Controls.Add(Me.Label15)
-        Me.Panel_ChosenExtraFlavor.Location = New System.Drawing.Point(27, 345)
+        Me.Panel_ChosenExtraFlavor.Location = New System.Drawing.Point(27, 348)
         Me.Panel_ChosenExtraFlavor.Name = "Panel_ChosenExtraFlavor"
-        Me.Panel_ChosenExtraFlavor.Size = New System.Drawing.Size(151, 60)
+        Me.Panel_ChosenExtraFlavor.Size = New System.Drawing.Size(167, 60)
         Me.Panel_ChosenExtraFlavor.TabIndex = 14
         '
         'Label16
@@ -599,12 +599,22 @@ Partial Class Form2
         '
         'Panel_ChosenToppings
         '
+        Me.Panel_ChosenToppings.Controls.Add(Me.Label2)
         Me.Panel_ChosenToppings.Controls.Add(Me.Label12)
-        Me.Panel_ChosenToppings.Controls.Add(Me.Label13)
-        Me.Panel_ChosenToppings.Location = New System.Drawing.Point(27, 301)
+        Me.Panel_ChosenToppings.Location = New System.Drawing.Point(27, 303)
         Me.Panel_ChosenToppings.Name = "Panel_ChosenToppings"
-        Me.Panel_ChosenToppings.Size = New System.Drawing.Size(151, 38)
+        Me.Panel_ChosenToppings.Size = New System.Drawing.Size(167, 38)
         Me.Panel_ChosenToppings.TabIndex = 13
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(82, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 25)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "none"
         '
         'Label12
         '
@@ -616,23 +626,24 @@ Partial Class Form2
         Me.Label12.TabIndex = 7
         Me.Label12.Text = "Toppings:"
         '
-        'Label13
-        '
-        Me.Label13.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label13.Location = New System.Drawing.Point(82, 4)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(66, 25)
-        Me.Label13.TabIndex = 8
-        Me.Label13.Text = "none"
-        '
         'Panel_ChosenProteins
         '
+        Me.Panel_ChosenProteins.Controls.Add(Me.Label3)
         Me.Panel_ChosenProteins.Controls.Add(Me.Label10)
-        Me.Panel_ChosenProteins.Controls.Add(Me.Label11)
         Me.Panel_ChosenProteins.Location = New System.Drawing.Point(27, 257)
         Me.Panel_ChosenProteins.Name = "Panel_ChosenProteins"
-        Me.Panel_ChosenProteins.Size = New System.Drawing.Size(151, 38)
+        Me.Panel_ChosenProteins.Size = New System.Drawing.Size(167, 40)
         Me.Panel_ChosenProteins.TabIndex = 12
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(87, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 25)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "none"
         '
         'Label10
         '
@@ -644,22 +655,13 @@ Partial Class Form2
         Me.Label10.TabIndex = 7
         Me.Label10.Text = "Proteins:"
         '
-        'Label11
-        '
-        Me.Label11.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label11.Location = New System.Drawing.Point(82, 4)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(66, 25)
-        Me.Label11.TabIndex = 8
-        Me.Label11.Text = "none"
-        '
         'Panel_ChosenNoodles
         '
         Me.Panel_ChosenNoodles.Controls.Add(Me.Label8)
         Me.Panel_ChosenNoodles.Controls.Add(Me.Label9)
         Me.Panel_ChosenNoodles.Location = New System.Drawing.Point(27, 213)
         Me.Panel_ChosenNoodles.Name = "Panel_ChosenNoodles"
-        Me.Panel_ChosenNoodles.Size = New System.Drawing.Size(151, 38)
+        Me.Panel_ChosenNoodles.Size = New System.Drawing.Size(167, 38)
         Me.Panel_ChosenNoodles.TabIndex = 11
         '
         'Label8
@@ -675,9 +677,9 @@ Partial Class Form2
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(85, 4)
+        Me.Label9.Location = New System.Drawing.Point(70, 4)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(66, 25)
+        Me.Label9.Size = New System.Drawing.Size(97, 25)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "none"
         '
@@ -687,7 +689,7 @@ Partial Class Form2
         Me.Panel_ChosenBroth.Controls.Add(Me.Label7)
         Me.Panel_ChosenBroth.Location = New System.Drawing.Point(27, 169)
         Me.Panel_ChosenBroth.Name = "Panel_ChosenBroth"
-        Me.Panel_ChosenBroth.Size = New System.Drawing.Size(151, 38)
+        Me.Panel_ChosenBroth.Size = New System.Drawing.Size(167, 38)
         Me.Panel_ChosenBroth.TabIndex = 10
         '
         'Label6
@@ -703,9 +705,9 @@ Partial Class Form2
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(82, 4)
+        Me.Label7.Location = New System.Drawing.Point(66, 4)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 25)
+        Me.Label7.Size = New System.Drawing.Size(82, 25)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "none"
         '
@@ -715,7 +717,7 @@ Partial Class Form2
         Me.Panel_ChosenSize.Controls.Add(Me.Label5)
         Me.Panel_ChosenSize.Location = New System.Drawing.Point(27, 125)
         Me.Panel_ChosenSize.Name = "Panel_ChosenSize"
-        Me.Panel_ChosenSize.Size = New System.Drawing.Size(151, 38)
+        Me.Panel_ChosenSize.Size = New System.Drawing.Size(167, 38)
         Me.Panel_ChosenSize.TabIndex = 9
         '
         'Label1
@@ -731,9 +733,9 @@ Partial Class Form2
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(82, 4)
+        Me.Label5.Location = New System.Drawing.Point(63, 4)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(66, 25)
+        Me.Label5.Size = New System.Drawing.Size(101, 25)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "none"
         '
@@ -1925,12 +1927,12 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(1027, 539)
+        Me.Controls.Add(Me.Panel_ExtraFlavorMiddle)
+        Me.Controls.Add(Me.Panel_ToppingsMiddle)
+        Me.Controls.Add(Me.Panel_ProteinsMiddle)
+        Me.Controls.Add(Me.Panel_NoodlesMiddle)
         Me.Controls.Add(Me.Panel_SizeMiddle)
         Me.Controls.Add(Me.Panel_BrothMiddle)
-        Me.Controls.Add(Me.Panel_NoodlesMiddle)
-        Me.Controls.Add(Me.Panel_ProteinsMiddle)
-        Me.Controls.Add(Me.Panel_ToppingsMiddle)
-        Me.Controls.Add(Me.Panel_ExtraFlavorMiddle)
         Me.Controls.Add(Me.Panel_Right)
         Me.Controls.Add(Me.Panel_Left)
         Me.Name = "Form2"
@@ -2048,13 +2050,10 @@ Partial Class Form2
     Friend WithEvents Panel_ChosenExtraFlavor As Panel
     Friend WithEvents Label16 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents Panel_ChosenToppings As Panel
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents Panel_ChosenProteins As Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Panel_ChosenNoodles As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
@@ -2159,4 +2158,7 @@ Partial Class Form2
     Friend WithEvents PB_small As PictureBox
     Friend WithEvents RB_small As RadioButton
     Friend WithEvents bttn_frm2BtOrder As Button
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

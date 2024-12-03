@@ -9,7 +9,7 @@ Public Class Form1
     Private clickedItems As New Dictionary(Of String, Integer)()
 
     'Database
-    Dim conn As MySqlConnection
+    Public conn As MySqlConnection
     Dim cmd As MySqlCommand
     Dim cmddr As MySqlCommand
     Dim reader As MySqlDataReader
@@ -47,7 +47,7 @@ Public Class Form1
         Try
             conn.Open()
 
-            ' Assign tags to predefined buttons (no additional buttons for these items)
+            ' Assign tags to predefined buttons 
             bttn_AOtofu.Tag = "Tofu"
             bttn_AOkimchi.Tag = "Kimchi"
             bttn_AOnori.Tag = "Nori"
@@ -78,7 +78,7 @@ Public Class Form1
             bttn_Atakoyaki.Tag = "Takoyaki"
             bttn_Atempura.Tag = "Tempura"
 
-            LoadMenuItems() ' Load other dynamic addon items
+            LoadMenuItems() 
         Catch ex As Exception
             MessageBox.Show("Error connecting to the database: " & ex.Message)
         Finally
@@ -170,17 +170,15 @@ Public Class Form1
     End Sub
 
     Private Sub bttn_promos_Click(sender As Object, e As EventArgs) Handles bttn_promos.Click
-        Form4.Show()
+        Dim form4 As New Form4()
+        form4.SharedConnection = conn ' Pass the connection
+        form4.Show()
         Me.Hide()
     End Sub
 
     Private Sub bttn_MakeRamen_Click(sender As Object, e As EventArgs) Handles bttn_MakeRamen.Click
         Form2.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Label_AOsoftBoiledegg_Click(sender As Object, e As EventArgs) Handles Label_AOsoftBoiledegg.Click
-
     End Sub
 
     Private Sub bttn_addons_Click(sender As Object, e As EventArgs) Handles bttn_addons.Click
