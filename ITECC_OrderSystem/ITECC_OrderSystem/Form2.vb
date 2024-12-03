@@ -255,10 +255,20 @@ Public Class Form2
                 End If
             Next
 
+            ' Update SharedData
+            For Each item As String In selectedItems
+                If SharedData.AppliedItems.ContainsKey(item) Then
+                    SharedData.AppliedItems(item) += 1
+                Else
+                    SharedData.AppliedItems.Add(item, 1)
+                End If
+            Next
+            SharedData.AppliedSubtotal = totalPrice
+
             ' Pass data to Form3
             Dim itemList As String = String.Join(Environment.NewLine, selectedItems)
             Dim form3 As New Form3()
-            form3.UpdateLabel(itemList, totalPrice)
+            form3.UpdateLabel(itemList, totalPrice) ' Ensure this method in Form3 is correctly updating labels
             form3.Show()
             Me.Close()
 
@@ -268,5 +278,6 @@ Public Class Form2
             conn?.Close()
         End Try
     End Sub
+
 
 End Class

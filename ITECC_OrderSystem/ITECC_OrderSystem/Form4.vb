@@ -36,7 +36,7 @@ Public Class Form4
                     discountPercent = Convert.ToDecimal(result)
                     MessageBox.Show($"Voucher applied! Discount: {discountPercent}% off", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' Store the discount percentage in SharedData.vb
+                    ' Update the global discount in SharedData
                     SharedData.AppliedDiscountPercent = discountPercent
                 Else
                     MessageBox.Show("Invalid voucher code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -51,12 +51,14 @@ Public Class Form4
             End If
         End Try
 
-        ' Pass the discount percentage to Form3
+        ' After voucher application, update Form3
         Form3.ApplyDiscount(SharedData.AppliedDiscountPercent)
     End Sub
 
+
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form3.Show()
-        Me.close()
+        Me.Close()
     End Sub
 End Class

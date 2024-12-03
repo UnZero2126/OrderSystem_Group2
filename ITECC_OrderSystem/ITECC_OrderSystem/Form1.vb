@@ -78,7 +78,7 @@ Public Class Form1
             bttn_Atakoyaki.Tag = "Takoyaki"
             bttn_Atempura.Tag = "Tempura"
 
-            LoadMenuItems() 
+            LoadMenuItems()
         Catch ex As Exception
             MessageBox.Show("Error connecting to the database: " & ex.Message)
         Finally
@@ -206,17 +206,19 @@ Public Class Form1
         AddItem(item)
     End Sub
     Private Sub AddItem(item As String)
-        If clickedItems.ContainsKey(item) Then
-            clickedItems(item) += 1
+        ' Add item to the global SharedData
+        If SharedData.AppliedItems.ContainsKey(item) Then
+            SharedData.AppliedItems(item) += 1
         Else
-            clickedItems.Add(item, 1)
+            SharedData.AppliedItems.Add(item, 1)
         End If
 
-        Dim itemPrice As Decimal = GetItemPrice(item)
-        Dim subtotal As Decimal = CalculateSubtotal()
+        ' Recalculate subtotal
+        SharedData.AppliedSubtotal = CalculateSubtotal()
 
-        If Form3 IsNot Nothing Then
-            Form3.UpdateLabel(FormatItemList(), subtotal)
+        ' Update Form3 with the latest values
+        If Form3 IsNot Nothing AndAlso Form3.Visible Then
+            Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
         End If
     End Sub
 
@@ -247,16 +249,14 @@ Public Class Form1
         End Try
         Return price
     End Function
-
     Private Function CalculateSubtotal() As Decimal
         Dim subtotal As Decimal = 0D
-        For Each kvp As KeyValuePair(Of String, Integer) In clickedItems
+        For Each kvp As KeyValuePair(Of String, Integer) In SharedData.AppliedItems
             Dim price As Decimal = GetItemPrice(kvp.Key)
             subtotal += price * kvp.Value
         Next
         Return subtotal
     End Function
-
     Private Function FormatItemList() As String
         Dim formattedList As New List(Of String)
         For Each kvp As KeyValuePair(Of String, Integer) In clickedItems

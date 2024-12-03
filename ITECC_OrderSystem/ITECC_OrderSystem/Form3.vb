@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Form3
-    Dim conn As MySqlConnection
     Private discountPercent As Decimal = 0D ' Storage for applied discount
 
     Private Sub bttn_frm3BtOrder_Click(sender As Object, e As EventArgs) Handles bttn_frm3BtOrder.Click
@@ -10,15 +9,19 @@ Public Class Form3
     End Sub
 
     Public Sub UpdateLabel(itemList As String, Optional subtotalValue As Decimal = 0D)
-        Label_ListofOrder.Text = itemList ' Display the list of selected items
-        Subtotal.Text = Format(subtotalValue, "C2") ' Display the subtotal in currency format
-        UpdateTotal() ' Recalculate totals if the label is updated
+        ' Set item list and subtotal based on shared data
+        Label_ListofOrder.Text = itemList
+        Subtotal.Text = Format(subtotalValue, "C2") ' Update the subtotal
+
+        ' Update the discount and total after updating subtotal
+        UpdateTotal()
     End Sub
 
-    Private Sub UpdateTotal() 'tryy munaaa version2 sa notepad
+
+    Private Sub UpdateTotal()
         Dim subtotalValue As Decimal
         If Decimal.TryParse(Subtotal.Text, Globalization.NumberStyles.Currency, Globalization.CultureInfo.CurrentCulture, subtotalValue) Then
-            Dim discountAmount As Decimal = subtotalValue * (discountPercent / 100)
+            Dim discountAmount As Decimal = subtotalValue * (SharedData.AppliedDiscountPercent / 100)
             Dim totalValue As Decimal = subtotalValue - discountAmount
             If totalValue < 0 Then totalValue = 0
 
@@ -29,18 +32,38 @@ Public Class Form3
         End If
     End Sub
 
-    ' Apply a discount and recalculate the total amount to display ayokoo na looordd waaaaaaaahhh
     Public Sub ApplyDiscount(value As Decimal)
-        discountPercent = value ' Update the stored discount percentage
+        ' Update the stored discount percentage in SharedData
+        SharedData.AppliedDiscountPercent = value
         UpdateTotal()
     End Sub
 
+    Private Function FormatItemList() As String
+        Dim formattedList As New List(Of String)
+
+        ' Loop through all the items in SharedData.AppliedItems
+        For Each kvp As KeyValuePair(Of String, Integer) In SharedData.AppliedItems
+            ' If an item is ordered more than once, append the quantity
+            If kvp.Value > 1 Then
+                formattedList.Add($"{kvp.Key} x{kvp.Value}")
+            Else
+                formattedList.Add(kvp.Key)
+            End If
+        Next
+
+        ' Join the items with a newline to display them in the Label
+        Return String.Join(Environment.NewLine, formattedList)
+    End Function
+
     ' Apply the saved discount value when the form loads
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Get the discount from SharedData
+        ' Load the saved discount from SharedData and apply it
         If SharedData.AppliedDiscountPercent > 0D Then
             ApplyDiscount(SharedData.AppliedDiscountPercent)
         End If
+
+        ' Use the shared data for the item list and subtotal
+        UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
