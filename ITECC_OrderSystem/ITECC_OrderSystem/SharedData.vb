@@ -4,4 +4,6 @@
     Public AppliedDiscountPercent As Decimal = 0D
     Public AppliedItems As New Dictionary(Of String, Integer)()
     Public AppliedSubtotal As Decimal = 0
+    Public LoggedIn As Boolean = False
+    Public UserAddress As String = ""
 End Module

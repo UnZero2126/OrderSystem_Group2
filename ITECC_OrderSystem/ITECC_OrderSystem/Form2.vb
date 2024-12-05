@@ -9,7 +9,121 @@ Public Class Form2
         Form1.Show()
         Me.Close()
     End Sub
+    ' Boolean flags to track required selections
+    Private sizeSelected As Boolean = False
+    Private brothSelected As Boolean = False
+    Private noodlesSelected As Boolean = False
 
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Initially disable the checkout button
+        bttn_addtoCart.Enabled = False
+    End Sub
+
+    Private Sub UpdateCheckoutButtonState()
+        ' Enable the button only if all required selections are made
+        bttn_addtoCart.Enabled = sizeSelected AndAlso brothSelected AndAlso noodlesSelected
+    End Sub
+
+    ' Event handlers for size selection
+    Private Sub RB_small_CheckedChanged(sender As Object, e As EventArgs) Handles RB_small.CheckedChanged
+        If RB_small.Checked Then
+            sizeSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_medium_CheckedChanged(sender As Object, e As EventArgs) Handles RB_medium.CheckedChanged
+        If RB_medium.Checked Then
+            sizeSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_large_CheckedChanged(sender As Object, e As EventArgs) Handles RB_large.CheckedChanged
+        If RB_large.Checked Then
+            sizeSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_ExtraLarge_CheckedChanged(sender As Object, e As EventArgs) Handles RB_ExtraLarge.CheckedChanged
+        If RB_ExtraLarge.Checked Then
+            sizeSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    ' Event handlers for broth selection
+    Private Sub RB_ShoyuBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_ShoyuBroth.CheckedChanged
+        If RB_ShoyuBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_MisoBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_MisoBroth.CheckedChanged
+        If RB_MisoBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_ShioBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_ShioBroth.CheckedChanged
+        If RB_ShioBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_CurryBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_CurryBroth.CheckedChanged
+        If RB_CurryBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_TonkotsuBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_TonkotsuBroth.CheckedChanged
+        If RB_TonkotsuBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_VegetableBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_VegetableBroth.CheckedChanged
+        If RB_VegetableBroth.Checked Then
+            brothSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    ' Event handlers for noodle selection
+    Private Sub RB_CRNoodles_CheckedChanged(sender As Object, e As EventArgs) Handles RB_CRNoodles.CheckedChanged
+        If RB_CRNoodles.Checked Then
+            noodlesSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_StraightNoodles_CheckedChanged(sender As Object, e As EventArgs) Handles RB_StraightNoodles.CheckedChanged
+        If RB_StraightNoodles.Checked Then
+            noodlesSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_UdonNoodles_CheckedChanged(sender As Object, e As EventArgs) Handles RB_UdonNoodles.CheckedChanged
+        If RB_UdonNoodles.Checked Then
+            noodlesSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
+
+    Private Sub RB_WavyNoodles_CheckedChanged(sender As Object, e As EventArgs) Handles RB_WavyNoodles.CheckedChanged
+        If RB_WavyNoodles.Checked Then
+            noodlesSelected = True
+            UpdateCheckoutButtonState()
+        End If
+    End Sub
     Private Sub bttn_Size_Click(sender As Object, e As EventArgs) Handles bttn_Size.Click
         Panel_size.Height = bttn_Size.Height
         Panel_size.Top = bttn_Size.Top
@@ -77,6 +191,8 @@ Public Class Form2
     End Sub
 
     Private Sub bttn_addtoRamen_Click(sender As Object, e As EventArgs) Handles bttn_addtoRamen.Click
+
+
         If RB_small.Checked Then
             Label5.Text = "Small"
         ElseIf RB_medium.Checked Then
@@ -217,8 +333,14 @@ Public Class Form2
         conn = New MySqlConnection
         conn.ConnectionString = "server=127.0.0.1;userid=root;password='';database=ordering_system2"
 
+        If Not SharedData.LoggedIn Then
+            MessageBox.Show("You must be logged in to add items to the cart.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Dim totalPrice As Decimal = 0D
         Dim selectedItems As New List(Of String)
+
 
         Try
             If conn.State = ConnectionState.Closed Then conn.Open()
@@ -263,14 +385,14 @@ Public Class Form2
                     SharedData.AppliedItems.Add(item, 1)
                 End If
             Next
-            SharedData.AppliedSubtotal = totalPrice
+            SharedData.AppliedSubtotal += totalPrice
 
             ' Pass data to Form3
             Dim itemList As String = String.Join(Environment.NewLine, selectedItems)
             Dim form3 As New Form3()
-            form3.UpdateLabel(itemList, totalPrice)
+            form3.UpdateLabel(itemList, SharedData.AppliedSubtotal)
             form3.Show()
-            Me.Close()
+            Me.close()
 
         Catch ex As Exception
             MessageBox.Show("Error fetching prices: " & ex.Message)
@@ -282,5 +404,11 @@ Public Class Form2
     Private Sub bttn_cart_Click(sender As Object, e As EventArgs) Handles bttn_cart.Click
         Form3.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub bttn_account_Click(sender As Object, e As EventArgs) Handles bttn_account.Click
+        Form5.Show()
+        Me.Hide()
+
     End Sub
 End Class

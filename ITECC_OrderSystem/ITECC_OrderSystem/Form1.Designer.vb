@@ -169,6 +169,7 @@ Partial Class Form1
         Me.Label_AOsoftBoiledegg = New System.Windows.Forms.Label()
         Me.bttn_AOsoftBoiledegg = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.AboutInfo.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1579,6 +1580,7 @@ Partial Class Form1
         '
         'Panel_AO
         '
+        Me.Panel_AO.Controls.Add(Me.Label1)
         Me.Panel_AO.Controls.Add(Me.Panel_AOtofu)
         Me.Panel_AO.Controls.Add(Me.Panel_AOkimchi)
         Me.Panel_AO.Controls.Add(Me.Panel_AOnori)
@@ -1753,6 +1755,16 @@ Partial Class Form1
         Me.Label9.Size = New System.Drawing.Size(333, 46)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Ordering System"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(156, 234)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(78, 34)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Php. 30.0"
         '
         'Form1
         '
@@ -2008,4 +2020,5 @@ Partial Class Form1
     Friend WithEvents Label_AOsoftBoiledegg As Label
     Friend WithEvents bttn_AOsoftBoiledegg As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label1 As Label
 End Class

@@ -12,30 +12,29 @@ Public Class Form5
         Try
             conn.Open()
             Dim Query As String
-            Query = "select * from ordering_system2.signup where Username='" & TB_Username.Text & "' and Password='" & TB_Password.Text & "' "
+            Query = "SELECT * FROM ordering_system2.signup WHERE Username='" & TB_Username.Text & "' AND Password='" & TB_Password.Text & "'"
             COMMAND = New MySqlCommand(Query, conn)
-            READER = Command.ExecuteReader
-            Dim count As Integer
-            count = 0
-            While READER.Read
-                count = count + 1
+            READER = COMMAND.ExecuteReader
+            Dim count As Integer = 0
+            Dim userAddress As String = ""
 
+            While READER.Read()
+                count += 1
+                If READER.HasRows Then
+                    userAddress = READER("Address").ToString() ' Fetch the address of the logged-in user
+                End If
             End While
 
             If count = 1 Then
-                MessageBox.Show("Username and password are correct")
+                SharedData.LoggedIn = True
+                SharedData.UserAddress = userAddress ' Store the address in SharedData
                 Form1.Show()
                 Me.Hide()
-
-            ElseIf count > 1 Then
-                MessageBox.Show("Username and password are Duplicate")
             Else
-                MessageBox.Show("Username and password are not correct")
+                MessageBox.Show("Username and password are not correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
-
             conn.Close()
-
         Catch ex As Exception
             MsgBox(ex.Message)
             conn.Close()

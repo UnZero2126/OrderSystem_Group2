@@ -252,20 +252,28 @@ Public Class Form1
         AddItem(item)
     End Sub
     Private Sub AddItem(item As String)
+        ' Ensure the user is logged in
+        If Not SharedData.LoggedIn Then
+            MessageBox.Show("You must be logged in to add items to the cart.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        ' Update or add the item to the shared cart
         If SharedData.AppliedItems.ContainsKey(item) Then
             SharedData.AppliedItems(item) += 1
         Else
-            SharedData.AppliedItems.Add(item, 1)
+            SharedData.AppliedItems(item) = 1
         End If
 
-        ' Recalculate subtotal
-        SharedData.AppliedSubtotal = CalculateSubtotal()
+        ' Recalculate the subtotal globally
+        SharedData.AppliedSubtotal += CalculateSubtotal()
 
-        ' Update Form3 latest orders
-        If Form3 IsNot Nothing AndAlso Form3.Visible Then
+        ' Update UI in any other forms if necessary
+        If Form3.Visible Then
             Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
         End If
     End Sub
+
 
     Private Function GetItemPrice(item As String) As Decimal
         Dim price As Decimal = 0D
@@ -296,12 +304,14 @@ Public Class Form1
     End Function
     Private Function CalculateSubtotal() As Decimal
         Dim subtotal As Decimal = 0D
-        For Each kvp As KeyValuePair(Of String, Integer) In SharedData.AppliedItems
+        For Each kvp In SharedData.AppliedItems
             Dim price As Decimal = GetItemPrice(kvp.Key)
             subtotal += price * kvp.Value
         Next
+        SharedData.AppliedSubtotal += subtotal
         Return subtotal
     End Function
+
     Private Function FormatItemList() As String
         Dim formattedList As New List(Of String)
         For Each kvp As KeyValuePair(Of String, Integer) In clickedItems
@@ -315,7 +325,7 @@ Public Class Form1
         Return String.Join(Environment.NewLine, formattedList)
     End Function
     Private Sub bttn_cart_Click(sender As Object, e As EventArgs) Handles bttn_cart.Click
-        Form3.UpdateLabel(FormatItemList(), CalculateSubtotal())
+        Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal) 'bug heree. already tried changing it to SharedData.AppliedSubtotal HELP ME LAWD HESSUSSSS
         Form3.Show()
         Me.Hide()
     End Sub
@@ -325,4 +335,5 @@ Public Class Form1
         Me.Hide()
 
     End Sub
+
 End Class
