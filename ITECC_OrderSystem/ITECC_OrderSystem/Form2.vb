@@ -17,6 +17,12 @@ Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Initially disable the checkout button
         bttn_addtoCart.Enabled = False
+        Panel_size.Visible = False
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub UpdateCheckoutButtonState()
@@ -133,6 +139,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = False
         Panel_ToppingsMiddle.Visible = False
         Panel_ExtraFlavorMiddle.Visible = False
+        Panel_size.Visible = True
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub bttn_broth_Click(sender As Object, e As EventArgs) Handles bttn_broth.Click
@@ -144,6 +156,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = False
         Panel_ToppingsMiddle.Visible = False
         Panel_ExtraFlavorMiddle.Visible = False
+        Panel_size.Visible = False
+        Panel_broth.Visible = True
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub bttn_noodles_Click(sender As Object, e As EventArgs) Handles bttn_noodles.Click
@@ -155,6 +173,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = False
         Panel_ToppingsMiddle.Visible = False
         Panel_ExtraFlavorMiddle.Visible = False
+        Panel_size.Visible = False
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = True
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub bttn_proteins_Click(sender As Object, e As EventArgs) Handles bttn_proteins.Click
@@ -166,6 +190,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = True
         Panel_ToppingsMiddle.Visible = False
         Panel_ExtraFlavorMiddle.Visible = False
+        Panel_size.Visible = False
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = True
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub bttn_toppings_Click(sender As Object, e As EventArgs) Handles bttn_toppings.Click
@@ -177,6 +207,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = False
         Panel_ToppingsMiddle.Visible = True
         Panel_ExtraFlavorMiddle.Visible = False
+        Panel_size.Visible = False
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = True
+        Panel_ExtraFlavor.Visible = False
     End Sub
 
     Private Sub bttn_extraFlavor_Click(sender As Object, e As EventArgs) Handles bttn_extraFlavor.Click
@@ -188,6 +224,12 @@ Public Class Form2
         Panel_ProteinsMiddle.Visible = False
         Panel_ToppingsMiddle.Visible = False
         Panel_ExtraFlavorMiddle.Visible = True
+        Panel_size.Visible = False
+        Panel_broth.Visible = False
+        Panel_noodles.Visible = False
+        Panel_proteins.Visible = False
+        Panel_toppings.Visible = False
+        Panel_ExtraFlavor.Visible = True
     End Sub
 
     Private Sub bttn_addtoRamen_Click(sender As Object, e As EventArgs) Handles bttn_addtoRamen.Click
@@ -344,23 +386,28 @@ Public Class Form2
 
         Try
             If conn.State = ConnectionState.Closed Then conn.Open()
-            'di pa taposs to add whats beloww
             ' Add size, broth, noodles, proteins, toppings, and extra flavors
             If Label5.Text <> "" Then selectedItems.Add(Label5.Text)
             If Label7.Text <> "" Then selectedItems.Add(Label7.Text)
             If Label9.Text <> "" Then selectedItems.Add(Label9.Text)
+
+            ' PUROOOOOOTEEEINNNNN BIIG MUSKELSSS
             If CB_Beef.Checked Then selectedItems.Add("Beef")
             If CB_GrilledChicken.Checked Then selectedItems.Add("Grilled Chicken")
             If CB_GroundPork.Checked Then selectedItems.Add("Ground Pork")
             If CB_Tofu.Checked Then selectedItems.Add("Tofu")
             If CB_Egg.Checked Then selectedItems.Add("Egg")
             If CB_Shrimp.Checked Then selectedItems.Add("Shrimp")
+
+            ' Toppings
             If CB_Corn.Checked Then selectedItems.Add("Corn")
             If CB_Nori.Checked Then selectedItems.Add("Nori")
             If CB_Seaweed.Checked Then selectedItems.Add("Seaweed")
             If CB_Mushrooms.Checked Then selectedItems.Add("Mushrooms")
             If CB_Spinach.Checked Then selectedItems.Add("Spinach")
             If CB_GreenOnions.Checked Then selectedItems.Add("Green Onions")
+
+            ' Extra flavor yum yum rammen 
             If CB_ChiliOil.Checked Then selectedItems.Add("Chili Oil")
             If CB_Garlic.Checked Then selectedItems.Add("Garlic")
             If CB_SoySauce.Checked Then selectedItems.Add("Soy Sauce")
@@ -411,4 +458,5 @@ Public Class Form2
         Me.Hide()
 
     End Sub
+
 End Class

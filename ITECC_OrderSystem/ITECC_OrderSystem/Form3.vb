@@ -91,7 +91,6 @@ Public Class Form3
         UpdateTotal()
     End Sub
 
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim form4 As New Form4()
         form4.SharedConnection = Form1.conn
@@ -102,6 +101,110 @@ Public Class Form3
     Private Sub bttn_account_Click(sender As Object, e As EventArgs) Handles bttn_account.Click
         Form5.Show()
         Me.Hide()
+
+    End Sub
+
+    Private Sub deleteOrder_Click(sender As Object, e As EventArgs) Handles deleteOrder.Click
+        ' Check if an item is selected in the ListBox
+        If ListBox1_ListofOrder.SelectedItem IsNot Nothing Then
+            ' Get the selected item (e.g., "item A x2" or "item A")
+            Dim selectedItem As String = ListBox1_ListofOrder.SelectedItem.ToString()
+
+            ' Extract the base item name (e.g., "item A") by splitting the selected item
+            Dim itemName As String = selectedItem
+            If selectedItem.Contains(" x") Then
+                ' Split by " x" to separate the item name and quantity
+                Dim splitItem = selectedItem.Split(New String() {" x"}, StringSplitOptions.None)
+                itemName = splitItem(0) ' Get the name before the " x"
+            End If
+
+            ' Check if the item exists in the AppliedItems dictionary
+            If SharedData.AppliedItems.ContainsKey(itemName) Then
+                ' Get the current quantity of the item
+                Dim currentQuantity As Integer = SharedData.AppliedItems(itemName)
+
+                ' Get the price of the item to subtract it from the subtotal
+                Dim itemPrice As Decimal = GetItemPrice(itemName)
+
+                ' Subtract the item's contribution from the subtotal
+                Dim priceToSubtract As Decimal = 0D
+                If currentQuantity > 1 Then
+                    ' Decrease the quantity in AppliedItems and subtract the price of one occurrence
+                    SharedData.AppliedItems(itemName) -= 1
+                    priceToSubtract = itemPrice
+                Else
+                    ' Remove the item entirely and subtract its total price
+                    SharedData.AppliedItems.Remove(itemName)
+                    priceToSubtract = itemPrice
+                End If
+
+                ' Update the LastProcessedItems dictionary to reflect the deletion
+                If LastProcessedItems.ContainsKey(itemName) Then
+                    LastProcessedItems(itemName) -= 1
+                    If LastProcessedItems(itemName) <= 0 Then
+                        LastProcessedItems.Remove(itemName)
+                    End If
+                End If
+
+                ' Subtract the calculated price from the subtotal
+                SharedData.AppliedSubtotal -= priceToSubtract
+
+                ' Ensure subtotal does not go below zero
+                If SharedData.AppliedSubtotal < 0 Then SharedData.AppliedSubtotal = 0
+
+                ' Update the ListBox and recalculate totals
+                UpdateLabel(String.Join(Environment.NewLine, FormatItemList()), SharedData.AppliedSubtotal)
+            Else
+                MessageBox.Show("The selected item is not in the order list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("Please select an order to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+
+    Private Function GetItemPrice(item As String) As Decimal
+        Dim price As Decimal = 0D
+        Dim conn As New MySqlConnection("server=127.0.0.1;userid=root;password=;database=ordering_system2;SslMode=None")
+        Dim cmd As MySqlCommand
+
+        Try
+
+            ' Check the connection state before opening
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' MySQL query to get price from different tables
+            cmd = New MySqlCommand("SELECT COALESCE(price, 0) FROM (
+                                SELECT price FROM addons WHERE Name = @Name
+                                UNION
+                                SELECT price FROM drinks WHERE Name = @Name
+                                UNION
+                                SELECT price FROM desserts WHERE Name = @Name
+                                UNION
+                                SELECT price FROM maincourse WHERE Name = @Name
+                                UNION
+                                SELECT price FROM appetizer WHERE Name = @Name
+                                UNION
+                                SELECT price FROM makeyourownramen WHERE name = @Name
+                            ) AS PriceResult LIMIT 1", conn)
+            cmd.Parameters.AddWithValue("@Name", item)
+
+            ' Execute the query and get the result
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                price = Convert.ToDecimal(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error fetching item price: " & ex.Message)
+        Finally
+            conn?.Close()  ' Close the connection after execution
+        End Try
+        Return price
+    End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class

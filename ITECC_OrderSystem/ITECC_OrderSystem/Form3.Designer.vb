@@ -31,6 +31,7 @@ Partial Class Form3
         Me.Panel_BottomRight = New System.Windows.Forms.Panel()
         Me.bttn_frm3BtOrder = New System.Windows.Forms.Button()
         Me.Panel_MiddleRight = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Total = New System.Windows.Forms.Label()
         Me.Label_TotalTitle = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -137,6 +138,7 @@ Partial Class Form3
         'Panel_MiddleRight
         '
         Me.Panel_MiddleRight.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel_MiddleRight.Controls.Add(Me.Button1)
         Me.Panel_MiddleRight.Controls.Add(Me.Total)
         Me.Panel_MiddleRight.Controls.Add(Me.Label_TotalTitle)
         Me.Panel_MiddleRight.Controls.Add(Me.Button2)
@@ -152,12 +154,26 @@ Partial Class Form3
         Me.Panel_MiddleRight.Size = New System.Drawing.Size(361, 419)
         Me.Panel_MiddleRight.TabIndex = 3
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.Color.Gray
+        Me.Button1.Location = New System.Drawing.Point(17, 111)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(135, 37)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Change Delivery Address"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Total
         '
         Me.Total.AutoSize = True
         Me.Total.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Total.ForeColor = System.Drawing.Color.BurlyWood
-        Me.Total.Location = New System.Drawing.Point(252, 240)
+        Me.Total.Location = New System.Drawing.Point(252, 265)
         Me.Total.Name = "Total"
         Me.Total.Size = New System.Drawing.Size(25, 34)
         Me.Total.TabIndex = 8
@@ -168,7 +184,7 @@ Partial Class Form3
         Me.Label_TotalTitle.AutoSize = True
         Me.Label_TotalTitle.Font = New System.Drawing.Font("Javanese Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label_TotalTitle.ForeColor = System.Drawing.Color.BurlyWood
-        Me.Label_TotalTitle.Location = New System.Drawing.Point(17, 230)
+        Me.Label_TotalTitle.Location = New System.Drawing.Point(17, 255)
         Me.Label_TotalTitle.Name = "Label_TotalTitle"
         Me.Label_TotalTitle.Size = New System.Drawing.Size(78, 52)
         Me.Label_TotalTitle.TabIndex = 7
@@ -180,7 +196,7 @@ Partial Class Form3
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.Color.Gray
-        Me.Button2.Location = New System.Drawing.Point(17, 169)
+        Me.Button2.Location = New System.Drawing.Point(17, 190)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 37)
         Me.Button2.TabIndex = 6
@@ -193,7 +209,7 @@ Partial Class Form3
         Me.discount.AutoSize = True
         Me.discount.Font = New System.Drawing.Font("Javanese Text", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.discount.ForeColor = System.Drawing.Color.BurlyWood
-        Me.discount.Location = New System.Drawing.Point(252, 136)
+        Me.discount.Location = New System.Drawing.Point(252, 157)
         Me.discount.Name = "discount"
         Me.discount.Size = New System.Drawing.Size(25, 34)
         Me.discount.TabIndex = 5
@@ -204,7 +220,7 @@ Partial Class Form3
         Me.Label_DiscountTitle.AutoSize = True
         Me.Label_DiscountTitle.Font = New System.Drawing.Font("Javanese Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label_DiscountTitle.ForeColor = System.Drawing.Color.BurlyWood
-        Me.Label_DiscountTitle.Location = New System.Drawing.Point(17, 130)
+        Me.Label_DiscountTitle.Location = New System.Drawing.Point(17, 151)
         Me.Label_DiscountTitle.Name = "Label_DiscountTitle"
         Me.Label_DiscountTitle.Size = New System.Drawing.Size(120, 52)
         Me.Label_DiscountTitle.TabIndex = 4
@@ -293,4 +309,5 @@ Partial Class Form3
     Friend WithEvents Label_TotalTitle As Label
     Friend WithEvents deleteOrder As Button
     Friend WithEvents ListBox1_ListofOrder As ListBox
+    Friend WithEvents Button1 As Button
 End Class

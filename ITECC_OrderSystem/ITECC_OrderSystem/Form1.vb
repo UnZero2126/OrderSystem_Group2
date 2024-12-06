@@ -269,9 +269,9 @@ Public Class Form1
         SharedData.AppliedSubtotal += CalculateSubtotal()
 
         ' Update UI in any other forms if necessary
-        If Form3.Visible Then
-            Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
-        End If
+        'If Form3.Visible Then
+        'Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
+        'End If
     End Sub
 
 
@@ -302,15 +302,31 @@ Public Class Form1
         End Try
         Return price
     End Function
+
+
     Private Function CalculateSubtotal() As Decimal
-        Dim subtotal As Decimal = 0D
+        Dim deltaSubtotal As Decimal = 0D
+
         For Each kvp In SharedData.AppliedItems
-            Dim price As Decimal = GetItemPrice(kvp.Key)
-            subtotal += price * kvp.Value
+            Dim item As String = kvp.Key
+            Dim currentQuantity As Integer = kvp.Value
+
+            ' Determine the last processed quantity
+            Dim lastQuantity As Integer = If(LastProcessedItems.ContainsKey(item), LastProcessedItems(item), 0)
+
+            ' Compute only the difference
+            If currentQuantity > lastQuantity Then
+                Dim price As Decimal = GetItemPrice(item)
+                deltaSubtotal += price * (currentQuantity - lastQuantity)
+            End If
         Next
-        SharedData.AppliedSubtotal += subtotal
-        Return subtotal
+
+        ' Update LastProcessedItems with current state
+        LastProcessedItems = New Dictionary(Of String, Integer)(SharedData.AppliedItems)
+
+        Return deltaSubtotal
     End Function
+
 
     Private Function FormatItemList() As String
         Dim formattedList As New List(Of String)
