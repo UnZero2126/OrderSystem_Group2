@@ -9,7 +9,6 @@ Public Class Form3
     End Sub
 
     Public Sub UpdateLabel(itemList As String, Optional subtotalValue As Decimal = 0D)
-        ' Clear the ListBox and add the items line by line
         ListBox1_ListofOrder.Items.Clear()
         Dim items = itemList.Split(Environment.NewLine)
         For Each item As String In items
@@ -18,13 +17,10 @@ Public Class Form3
             End If
         Next
 
-        ' Update subtotal label
-        Subtotal.Text = Format(subtotalValue, "C2") ' Update subtotal
+        Subtotal.Text = Format(subtotalValue, "C2")
 
-        ' Retrieve the logged-in user's address and apply the delivery charge
         ApplyDeliveryCharge(SharedData.UserAddress)
 
-        ' Update discount and total after updating subtotal
         UpdateTotal()
     End Sub
 
@@ -42,7 +38,7 @@ Public Class Form3
         End If
     End Sub
 
-    Private Sub ApplyDeliveryCharge(address As String)
+    Public Sub ApplyDeliveryCharge(address As String)
         If address.ToLower().Contains("tanauan") Then
             deliveryCharge = 25
             standardDelivery.Text = "₱ 25"
@@ -61,7 +57,7 @@ Public Class Form3
     Private Function FormatItemList() As List(Of String)
         Dim formattedList As New List(Of String)
 
-        ' Loop through all the items in SharedData.AppliedItems
+        ' Loop through all items in SharedData.AppliedItems
         For Each kvp As KeyValuePair(Of String, Integer) In SharedData.AppliedItems
             ' If an item is ordered more than once add it (i.e x(n) )
             If kvp.Value > 1 Then
@@ -75,19 +71,15 @@ Public Class Form3
     End Function
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Ensure the subtotal is correctly fetched from SharedData
-        Subtotal.Text = Format(SharedData.AppliedSubtotal, "C2")  ' This should already work if AppliedSubtotal is set properly in SharedData
+        Subtotal.Text = Format(SharedData.AppliedSubtotal, "C2")
 
-        ' If there's a discount, apply it
         If SharedData.AppliedDiscountPercent > 0D Then
             ApplyDiscount(SharedData.AppliedDiscountPercent)
         End If
 
-        ' Update the ListBox with formatted items
         ListBox1_ListofOrder.Items.Clear()
         ListBox1_ListofOrder.Items.AddRange(FormatItemList().ToArray())
 
-        ' Ensure the total is updated after setting the subtotal
         UpdateTotal()
     End Sub
 
@@ -105,7 +97,6 @@ Public Class Form3
     End Sub
 
     Private Sub deleteOrder_Click(sender As Object, e As EventArgs) Handles deleteOrder.Click
-        ' Check if an item is selected in the ListBox
         If ListBox1_ListofOrder.SelectedItem IsNot Nothing Then
             ' Get the selected item (e.g., "item A x2" or "item A")
             Dim selectedItem As String = ListBox1_ListofOrder.SelectedItem.ToString()
@@ -113,32 +104,25 @@ Public Class Form3
             ' Extract the base item name (e.g., "item A") by splitting the selected item
             Dim itemName As String = selectedItem
             If selectedItem.Contains(" x") Then
-                ' Split by " x" to separate the item name and quantity
                 Dim splitItem = selectedItem.Split(New String() {" x"}, StringSplitOptions.None)
                 itemName = splitItem(0) ' Get the name before the " x"
             End If
 
             ' Check if the item exists in the AppliedItems dictionary
             If SharedData.AppliedItems.ContainsKey(itemName) Then
-                ' Get the current quantity of the item
                 Dim currentQuantity As Integer = SharedData.AppliedItems(itemName)
 
-                ' Get the price of the item to subtract it from the subtotal
                 Dim itemPrice As Decimal = GetItemPrice(itemName)
 
-                ' Subtract the item's contribution from the subtotal
                 Dim priceToSubtract As Decimal = 0D
                 If currentQuantity > 1 Then
-                    ' Decrease the quantity in AppliedItems and subtract the price of one occurrence
                     SharedData.AppliedItems(itemName) -= 1
                     priceToSubtract = itemPrice
                 Else
-                    ' Remove the item entirely and subtract its total price
                     SharedData.AppliedItems.Remove(itemName)
                     priceToSubtract = itemPrice
                 End If
 
-                ' Update the LastProcessedItems dictionary to reflect the deletion
                 If LastProcessedItems.ContainsKey(itemName) Then
                     LastProcessedItems(itemName) -= 1
                     If LastProcessedItems(itemName) <= 0 Then
@@ -146,7 +130,6 @@ Public Class Form3
                     End If
                 End If
 
-                ' Subtract the calculated price from the subtotal
                 SharedData.AppliedSubtotal -= priceToSubtract
 
                 ' Ensure subtotal does not go below zero
@@ -169,13 +152,10 @@ Public Class Form3
         Dim cmd As MySqlCommand
 
         Try
-
-            ' Check the connection state before opening
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
 
-            ' MySQL query to get price from different tables
             cmd = New MySqlCommand("SELECT COALESCE(price, 0) FROM (
                                 SELECT price FROM addons WHERE Name = @Name
                                 UNION
@@ -191,7 +171,7 @@ Public Class Form3
                             ) AS PriceResult LIMIT 1", conn)
             cmd.Parameters.AddWithValue("@Name", item)
 
-            ' Execute the query and get the result
+            ' get price here
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing AndAlso Not IsDBNull(result) Then
                 price = Convert.ToDecimal(result)
@@ -199,12 +179,14 @@ Public Class Form3
         Catch ex As Exception
             MessageBox.Show("Error fetching item price: " & ex.Message)
         Finally
-            conn?.Close()  ' Close the connection after execution
+            conn?.Close()
         End Try
         Return price
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form8.Show()
+        Me.Hide()
 
     End Sub
 End Class

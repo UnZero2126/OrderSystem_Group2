@@ -109,3 +109,4 @@ C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2
 C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ref\ITECC_OrderSystem.dll
 C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Jann Railey\Downloads\FinalsOrderSystem_Group2\FinalsOrderSystem_Group2\ITECC_OrderSystem\ITECC_OrderSystem\obj\Debug\net6.0-windows\ITECC_OrderSystem.Form8.resources

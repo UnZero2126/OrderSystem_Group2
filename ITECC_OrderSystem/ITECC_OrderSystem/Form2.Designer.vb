@@ -1927,9 +1927,9 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(1027, 539)
+        Me.Controls.Add(Me.Panel_SizeMiddle)
         Me.Controls.Add(Me.Panel_BrothMiddle)
         Me.Controls.Add(Me.Panel_NoodlesMiddle)
-        Me.Controls.Add(Me.Panel_SizeMiddle)
         Me.Controls.Add(Me.Panel_ExtraFlavorMiddle)
         Me.Controls.Add(Me.Panel_ToppingsMiddle)
         Me.Controls.Add(Me.Panel_ProteinsMiddle)

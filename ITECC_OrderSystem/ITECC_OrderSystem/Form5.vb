@@ -17,17 +17,20 @@ Public Class Form5
             READER = COMMAND.ExecuteReader
             Dim count As Integer = 0
             Dim userAddress As String = ""
+            Dim username As String = ""
 
             While READER.Read()
                 count += 1
                 If READER.HasRows Then
-                    userAddress = READER("Address").ToString() ' Fetch the address of the logged-in user
+                    userAddress = READER("Address").ToString() ' Fetch the address and username of the logged-in user
+                    username = READER("Username").ToString()
                 End If
             End While
 
             If count = 1 Then
                 SharedData.LoggedIn = True
                 SharedData.UserAddress = userAddress ' Store the address in SharedData
+                SharedData.username = username
                 Form1.Show()
                 Me.Hide()
             Else

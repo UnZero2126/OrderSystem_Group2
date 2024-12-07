@@ -13,7 +13,6 @@ Public Class Form2
     Private sizeSelected As Boolean = False
     Private brothSelected As Boolean = False
     Private noodlesSelected As Boolean = False
-
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Initially disable the checkout button
         bttn_addtoCart.Enabled = False
@@ -234,7 +233,6 @@ Public Class Form2
 
     Private Sub bttn_addtoRamen_Click(sender As Object, e As EventArgs) Handles bttn_addtoRamen.Click
 
-
         If RB_small.Checked Then
             Label5.Text = "Small"
         ElseIf RB_medium.Checked Then
@@ -260,7 +258,7 @@ Public Class Form2
         End If
 
         If RB_CRNoodles.Checked Then
-            Label9.Text = "Cold R"
+            Label9.Text = "Cold Ramen"
         ElseIf RB_StraightNoodles.Checked Then
             Label9.Text = "Straight"
         ElseIf RB_UdonNoodles.Checked Then
