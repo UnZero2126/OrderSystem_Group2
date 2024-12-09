@@ -22,7 +22,7 @@ Public Class Form5
             While READER.Read()
                 count += 1
                 If READER.HasRows Then
-                    userAddress = READER("Address").ToString() ' Fetch the address and username of the logged-in user
+                    userAddress = READER("Address").ToString() ' Get the address and username of the logged-in user
                     username = READER("Username").ToString()
                 End If
             End While

@@ -41,6 +41,7 @@ Partial Class Form3
         Me.Label_SDeliveryTitle = New System.Windows.Forms.Label()
         Me.Subtotal = New System.Windows.Forms.Label()
         Me.Label_SubtotalTitle = New System.Windows.Forms.Label()
+        Me.CheckOut = New System.Windows.Forms.Button()
         Me.Panel_Left.SuspendLayout()
         Me.Panel_TopRight.SuspendLayout()
         Me.Panel_BottomRight.SuspendLayout()
@@ -138,6 +139,7 @@ Partial Class Form3
         'Panel_MiddleRight
         '
         Me.Panel_MiddleRight.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel_MiddleRight.Controls.Add(Me.CheckOut)
         Me.Panel_MiddleRight.Controls.Add(Me.Button1)
         Me.Panel_MiddleRight.Controls.Add(Me.Total)
         Me.Panel_MiddleRight.Controls.Add(Me.Label_TotalTitle)
@@ -270,6 +272,15 @@ Partial Class Form3
         Me.Label_SubtotalTitle.TabIndex = 0
         Me.Label_SubtotalTitle.Text = "Subtotal"
         '
+        'CheckOut
+        '
+        Me.CheckOut.Location = New System.Drawing.Point(132, 365)
+        Me.CheckOut.Name = "CheckOut"
+        Me.CheckOut.Size = New System.Drawing.Size(94, 29)
+        Me.CheckOut.TabIndex = 10
+        Me.CheckOut.Text = "Check Out"
+        Me.CheckOut.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -310,4 +321,5 @@ Partial Class Form3
     Friend WithEvents deleteOrder As Button
     Friend WithEvents ListBox1_ListofOrder As ListBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents CheckOut As Button
 End Class

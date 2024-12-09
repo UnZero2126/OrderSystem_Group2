@@ -132,7 +132,7 @@ Public Class Form3
 
                 SharedData.AppliedSubtotal -= priceToSubtract
 
-                ' Ensure subtotal does not go below zero
+                ' subtotal does not go below zero
                 If SharedData.AppliedSubtotal < 0 Then SharedData.AppliedSubtotal = 0
 
                 ' Update the ListBox and recalculate totals
@@ -189,4 +189,49 @@ Public Class Form3
         Me.Hide()
 
     End Sub
+
+    Private Sub CheckOut_Click(sender As Object, e As EventArgs) Handles CheckOut.Click
+        Dim receipt As New System.Text.StringBuilder()
+
+        receipt.AppendLine("--------- RECEIPT ---------")
+        receipt.AppendLine($"Date: {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}")
+        receipt.AppendLine("Customer: " & SharedData.username)
+        receipt.AppendLine()
+        receipt.AppendLine("Items Ordered:")
+        receipt.AppendLine("--------------------------")
+
+        ' Add items from the ListBox
+        If ListBox1_ListofOrder.Items.Count > 0 Then
+            For Each item As String In ListBox1_ListofOrder.Items
+                receipt.AppendLine(item)
+            Next
+        Else
+            MessageBox.Show("No items to checkout.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        ' Add subtotal, delivery charge, discount, and total
+        receipt.AppendLine("--------------------------")
+        receipt.AppendLine($"Subtotal: {Subtotal.Text}")
+        receipt.AppendLine($"Delivery Charge: {standardDelivery.Text}")
+        receipt.AppendLine($"Discount: {discount.Text}")
+        receipt.AppendLine($"Total: {Total.Text}")
+        receipt.AppendLine("--------------------------")
+        receipt.AppendLine("Thank you for your order!")
+
+        ' Display receipt in a message box
+        MessageBox.Show(receipt.ToString(), "Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' clear the order after checkout
+        SharedData.AppliedItems.Clear()
+        SharedData.AppliedSubtotal = 0D
+        SharedData.AppliedDiscountPercent = 0D
+        SharedData.DiscountPercent = 0D
+        SharedData.VoucherApplied = False
+        ListBox1_ListofOrder.Items.Clear()
+        Subtotal.Text = "₱ 0.00"
+        discount.Text = "₱ 0.00"
+        Total.Text = "₱ 0.00"
+    End Sub
+
 End Class
