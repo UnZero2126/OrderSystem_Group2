@@ -9,7 +9,7 @@ Public Class Form2
         Form1.Show()
         Me.Close()
     End Sub
-    ' Boolean flags to track required selections
+
     Private sizeSelected As Boolean = False
     Private brothSelected As Boolean = False
     Private noodlesSelected As Boolean = False
@@ -25,11 +25,9 @@ Public Class Form2
     End Sub
 
     Private Sub UpdateCheckoutButtonState()
-        ' Enable the button only if all required selections are made
         bttn_addtoCart.Enabled = sizeSelected AndAlso brothSelected AndAlso noodlesSelected
     End Sub
 
-    ' Event handlers for size selection
     Private Sub RB_small_CheckedChanged(sender As Object, e As EventArgs) Handles RB_small.CheckedChanged
         If RB_small.Checked Then
             sizeSelected = True
@@ -58,7 +56,6 @@ Public Class Form2
         End If
     End Sub
 
-    ' Event handlers for broth selection
     Private Sub RB_ShoyuBroth_CheckedChanged(sender As Object, e As EventArgs) Handles RB_ShoyuBroth.CheckedChanged
         If RB_ShoyuBroth.Checked Then
             brothSelected = True
@@ -101,7 +98,6 @@ Public Class Form2
         End If
     End Sub
 
-    ' Event handlers for noodle selection
     Private Sub RB_CRNoodles_CheckedChanged(sender As Object, e As EventArgs) Handles RB_CRNoodles.CheckedChanged
         If RB_CRNoodles.Checked Then
             noodlesSelected = True

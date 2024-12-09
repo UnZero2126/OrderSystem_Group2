@@ -252,7 +252,6 @@ Public Class Form1
         AddItem(item)
     End Sub
     Private Sub AddItem(item As String)
-        ' Ensure the user is logged in
         If Not SharedData.LoggedIn Then
             MessageBox.Show("You must be logged in to add items to the cart.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -265,10 +264,9 @@ Public Class Form1
             SharedData.AppliedItems(item) = 1
         End If
 
-        ' Recalculate the subtotal globally
         SharedData.AppliedSubtotal += CalculateSubtotal()
 
-        ' Update UI in any other forms if necessary
+        ' Update UI in any other forms if necessary baka kailangan pa DO NOT REMOVE YET
         'If Form3.Visible Then
         'Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
         'End If
@@ -341,7 +339,7 @@ Public Class Form1
         Return String.Join(Environment.NewLine, formattedList)
     End Function
     Private Sub bttn_cart_Click(sender As Object, e As EventArgs) Handles bttn_cart.Click
-        Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal) 'bug heree. already tried changing it to SharedData.AppliedSubtotal HELP ME LAWD HESSUSSSS
+        Form3.UpdateLabel(FormatItemList(), SharedData.AppliedSubtotal)
         Form3.Show()
         Me.Hide()
     End Sub

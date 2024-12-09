@@ -20,21 +20,17 @@ Public Class Form8
 
         Try
             conn.Open()
-            ' Use parameterized query to prevent SQL injection
             Dim query As String = "UPDATE ordering_system2.signup SET Address = @newAddress WHERE Username = @username"
 
-            ' Use Using block for MySqlCommand
             Using COMMAND As New MySqlCommand(query, conn)
-                ' Add parameters to the command
                 COMMAND.Parameters.AddWithValue("@newAddress", TextBox1.Text)
-                COMMAND.Parameters.AddWithValue("@username", SharedData.username) ' Use the logged-in user's Username
+                COMMAND.Parameters.AddWithValue("@username", SharedData.username)
 
-                ' Execute the command
                 Dim rowsAffected As Integer = COMMAND.ExecuteNonQuery()
                 If rowsAffected > 0 Then
                     MessageBox.Show("Address changed successfully.")
-                    SharedData.UserAddress = TextBox1.Text ' Update shared data with the new address
-                    Form3.ApplyDeliveryCharge(TextBox1.Text)
+                    SharedData.UserAddress = TextBox1.Text
+                    Form3.ApplyDeliveryCharge(TextBox1.Text) ' update the current address in the ui and total calculation
                 Else
                     MessageBox.Show("No record updated. Please check your username.")
                 End If
@@ -42,7 +38,6 @@ Public Class Form8
         Catch ex As MySqlException
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            ' Ensure the connection is closed
             If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then
                 conn.Close()
             End If

@@ -25,7 +25,7 @@ Public Class Form4
 
             If SharedConnection.State = ConnectionState.Closed Then SharedConnection.Open()
 
-            ' Query retrieve discount percentage
+            ' retrieve discount percentage
             Dim query As String = "SELECT discountValue FROM voucher WHERE name = @voucherCode LIMIT 1"
             Using cmd As New MySqlCommand(query, SharedConnection)
                 cmd.Parameters.AddWithValue("@voucherCode", voucherCode)
